@@ -1,22 +1,22 @@
 [
   {
     "id": 1,
-    "model": "products.sub_category",
-    "fields": { "name": "ingredient", "friendly_name": "Ingredient" }
+    "model": "products.sub_categories",
+    "fields": { "name": "ingredients", "friendly_name": "ingredients" }
   },
   {
     "id": 2,
-    "model": "products.sub_category",
+    "model": "products.sub_categories",
     "fields": { "name": "raising_agent", "friendly_name": "Raising Agent" }
   },
   {
     "id": 3,
-    "model": "products.sub_category",
+    "model": "products.sub_categories",
     "fields": { "name": "emulsifier", "friendly_name": "Emulsifier" }
   },
   {
     "id": 4,
-    "model": "products.sub_category",
+    "model": "products.sub_categories",
     "fields": {
       "name": "acidity_regulator",
       "friendly_name": "Acidity Regulator"
@@ -24,7 +24,7 @@
   },
   {
     "id": 5,
-    "model": "products.sub_category",
+    "model": "products.sub_categories",
     "fields": {
       "name": "anti_caking_agent",
       "friendly_name": "Anti Caking Agent"
@@ -32,7 +32,7 @@
   },
   {
     "id": 6,
-    "model": "products.sub_category",
+    "model": "products.sub_categories",
     "fields": {
       "name": "gelling_agent",
       "friendly_name": "Gelling Agent"
@@ -40,7 +40,7 @@
   },
   {
     "id": 7,
-    "model": "products.sub_category",
+    "model": "products.sub_categories",
     "fields": {
       "name": "preservative",
       "friendly_name": "Preservative"
@@ -48,7 +48,7 @@
   },
   {
     "id": 8,
-    "model": "products.sub_category",
+    "model": "products.sub_categories",
     "fields": {
       "name": "humectant",
       "friendly_name": "Humectant"
@@ -56,7 +56,7 @@
   },
   {
     "id": 9,
-    "model": "products.sub_category",
+    "model": "products.sub_categories",
     "fields": {
       "name": "thickener",
       "friendly_name": "Thickener"
@@ -64,7 +64,7 @@
   },
   {
     "id": 10,
-    "model": "products.sub_category",
+    "model": "products.sub_categories",
     "fields": {
       "name": "sulphites",
       "friendly_name": "Sulphites"
@@ -72,7 +72,7 @@
   },
   {
     "id": 10,
-    "model": "products.sub_category",
+    "model": "products.sub_categories",
     "fields": {
       "name": "glazing_agents",
       "friendly_name": "Glazing Agents"
@@ -80,7 +80,7 @@
   },
   {
     "id": 11,
-    "model": "products.sub_category",
+    "model": "products.sub_categories",
     "fields": {
       "name": "stabilisers",
       "friendly_name": "Stabilisers"
@@ -88,7 +88,7 @@
   },
   {
     "id": 12,
-    "model": "products.sub_category",
+    "model": "products.sub_categories",
     "fields": {
       "name": "fruit_and_plant_concentrates",
       "friendly_name": "Fruit and Plant Concentrates"
