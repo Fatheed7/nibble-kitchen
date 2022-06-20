@@ -1,0 +1,930 @@
+[
+  {
+    "pk": 1,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk0001",
+      "name": "Salted Caramel Cake Jar",
+      "description": "Salted caramel sponge, layered with salted caramel sauce and salted caramel buttercream",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/saltedCaramel.png",
+      "image": "saltedCaramel.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 2,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk0002",
+      "name": "Banoffee Cake Jar",
+      "description": "Layers of freshly made banana caramel sauce, fluffy sponge and banana buttercream",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/banoffeeCakeJar.png",
+      "image": "banoffeeCakeJar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 3,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk0003",
+      "name": "Jam & Coconut Cake Jar",
+      "description": "Fluffy sponge cake smothered in jam and sprinkled with desiccated coconut layers.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/JamCoconutCakeJar.png",
+      "image": "JamCoconutCakeJar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 4,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk0004",
+      "name": "Forest Fruits Cake Jar",
+      "description": "A wonderfully fluffy chocolate sponge cake filled with creamy icing and topped with delicious cherries.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/ForestFruitsCakeJar.png",
+      "image": "ForestFruitsCakeJar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 5,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk005",
+      "name": "Caramel Cake Jar",
+      "description": "Melt in the mouth caramel cake jar with caramel sauce.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/caramelCakeJar.png",
+      "image": "caramelCakeJar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 6,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk006",
+      "name": "Bubble Gum Cake Jar",
+      "description": "Layers of fresh bubble gum flavoured cake and blue bubble gum icing.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/bubbleGumCakeJar.png",
+      "image": "bubbleGumCakeJar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 7,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk007",
+      "name": "Chocolate Fudge Cake Jar",
+      "description": "Extremely chocolatey fudge cake in a jar, for all those chocolate lovers.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/ChocolateFudgeSmall.png",
+      "image": "ChocolateFudgeSmall.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 8,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk008",
+      "name": "Tangy Lemon Cake Jar",
+      "description": "Our fresh and zesty lemon cake with layers of lemon curd and buttercream.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/Tangy-Lemon.png",
+      "image": "Tangy-Lemon.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 9,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk009",
+      "name": "Carrot Cake Jar",
+      "description": "Fluffy moist carrot cake sponge layered with vanilla buttercream topped with crunchie walnuts.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/carrotCakeJar.png",
+      "image": "carrotCakeJar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 10,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk010",
+      "name": "Sprinkle Cake Jar",
+      "description": "This retro sprinkle tray bake a childhood favourite yummy soft sponge cake with plenty of sticky icing and sprinkles.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/sprinkleCakeJar.png",
+      "image": "sprinkleCakeJar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 11,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk011",
+      "name": "Coffee Cake Jar",
+      "description": "Classic coffee cake with yummy coffee icing.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/coffeeCakeJar.png",
+      "image": "coffeeCakeJar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 12,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk012",
+      "name": "Chocolate Orange Cake Jar",
+      "description": "Layers of chocolate orange pieces, soft fluffy chocolate cake with orange and chocolate buttercream.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/chocolateOrange.png",
+      "image": "chocolateOrange.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 13,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk013",
+      "name": "Chocolate Mint Cake Jar",
+      "description": "Refreshing mint chocolate pieces with layers of fluffy chocolate cake and chocolate mint buttercream.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/chocolateMintCakeJar.png",
+      "image": "chocolateMintCakeJar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 14,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk014",
+      "name": "Blueberry Cake Jar",
+      "description": "Layers of fresh sweet blueberry sauce, vanilla cake and vanilla buttercream.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/blurberryCakeJar.png",
+      "image": "blueberryCakeJar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 15,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk015",
+      "name": "Strawberry Cake Jar",
+      "description": "Soft and fluffy strawberry flavoured sponge cake with layers of fresh strawberry jam and strawberry buttercream for a bite of summer.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/Strawberry-Cake-Jar.png",
+      "image": "Strawberry-Cake-Jar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 16,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk016",
+      "name": "Rainbow Cake Jar",
+      "description": "Brightly coloured rainbow layers of vanilla sponge and vanilla buttercream. A favourite with everyone.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/rainbowCakeJar.png",
+      "image": "rainbowCakeJar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 17,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk017",
+      "name": "Raspberry Ripple Cake Jar",
+      "description": "Layers of fresh sponge and homemade raspberry jam and raspberry buttercream.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/Raspberry-Ripple.png",
+      "image": "Raspberry-Ripple.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 18,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk018",
+      "name": "Chocolate Hazelnut Cake Jar",
+      "description": "Rich chocolate cake with chocolate hazelnut sauce, chocolate buttercream and crunchie hazelnut pieces.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/Hazelnut-Chocolate-1.png",
+      "image": "Hazelnut-Chocolate-1.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 19,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk019",
+      "name": "Toffee Cake Jar",
+      "description": "Fluffy toffee sponge with sticky toffee sauce, vanilla buttercream and toffee pieces.",
+      "price": 4.8,
+      "category": 1,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/Sticky-Toffe-Cake-Jar.png",
+      "image": "Sticky-Toffee-Cake-Jar.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 20,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk020",
+      "name": "Salted Caramel Brownie",
+      "description": "Salted Caramel Brownie is a tasty afternoon treat.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/SaltedCaramelBrownie.jpg",
+      "image": "SaltedCaramelBrownie.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 21,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk021",
+      "name": "Mars Brownie",
+      "description": "Full tray of fresh Mars brownie for any chocolate lover.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/Marsbar-scaled.jpg",
+      "image": "Marsbar-scaled.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 22,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk022",
+      "name": "Chocolate Kinder Brownie",
+      "description": "Kinder brownie. Hazelnut yumminess.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/20210824_225401-scaled-e1630186316489.jpg",
+      "image": "20210824_225401-scaled-e1630186316489.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 23,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk023",
+      "name": "Milky Way Brownie",
+      "description": "A smooth Milky Way brownie. Taste the galaxy.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/MilkywayBrownie.jpg",
+      "image": "MilkywayBrownie.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 24,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk024",
+      "name": "Peppermint Brownie",
+      "description": "Nothing beats this minty fresh chocolate brownie.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/Pepper-Mint-Brownie-1-scaled.jpg",
+      "image": "Pepper-Mint-Brownie-1-scaled.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 25,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk025",
+      "name": "Jammie Dodger Brownie",
+      "description": "Chocolate brownie topped with yummy Jammie Dodgers",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/jammieDodger-scaled.jpg",
+      "image": "jammieDodger-scaled.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 26,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk026",
+      "name": "Reese’s Peanut Butter Brownie",
+      "description": "This brownie is for the peanut butter lovers",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/reasespeanutbutter-scaled.jpg",
+      "image": "reasespeanutbutter-scaled.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 27,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk027",
+      "name": "Creme Egg Brownie",
+      "description": "Creme egg brownies are not just for Easter.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/CreamEgg-scaled.jpg",
+      "image": "CreamEgg-scaled.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 28,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk028",
+      "name": "Bourbon Cream Brownie",
+      "description": "A classic British biscuit brownie.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/Bourbon-Cream-scaled.jpg",
+      "image": "Bourbon-Cream-scaled.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 29,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk029",
+      "name": "Cookies & Cream Brownie",
+      "description": "Love them or hate them Oreo brownies.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/cookieAndCreamBrownie.jpg",
+      "image": "cookieAndCreamBrownie.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 30,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk030",
+      "name": "Marshmallow Brownie",
+      "description": "A lovely marshmallow brownie tray bake.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/MarshmallowBrownie.jpg",
+      "image": "MarshmallowBrownie.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 31,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk031",
+      "name": "Maltesers Brownie",
+      "description": "Yummy crispy Malteser brownie.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/malteaserBrownie.jpg",
+      "image": "malteaserBrownie.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 32,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk032",
+      "name": "Triple Chocolate Brownie",
+      "description": "Tasty triple chocolate brownie.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/TrippleChocolateBrownie.jpg",
+      "image": "TripleChocolateBrownie.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 33,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk033",
+      "name": "Jammie Wagon Wheels Brownie",
+      "description": "Keep on rolling with this yummy Jammie wagon wheels brownie.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/jammieDodgerBrownie.jpg",
+      "image": "jammieDodgerBrownie.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 34,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk034",
+      "name": "Fudge Brownie",
+      "description": "A tasty Fudge Brownie.",
+      "price": 16.0,
+      "category": 2,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/fudgeBrownie-scaled.jpg",
+      "image": "fudgeBrownie-scaled.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 35,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk035",
+      "name": "Custard Cream Blondie",
+      "description": "Crunchy deliciousness in every single mouthful.",
+      "price": 16.0,
+      "category": 3,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/08/custardCreamBlondieSlice.png",
+      "image": "custardCreamBlondieSlice.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 36,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk036",
+      "name": "White Chocolate & Cranberry Blondie",
+      "description": "A soft and chewy perfect afternoon snack.",
+      "price": 16.0,
+      "category": 3,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/whiteChocolateBlondieSlice.png",
+      "image": "whiteChocolateBlondieSlice.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 37,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk037",
+      "name": "Rum & Raisin Blondie",
+      "description": "The flavors in these sweet bites are decidedly adult-oriented.",
+      "price": 16.0,
+      "category": 3,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/RumAndRaisinSlice.png",
+      "image": "RumAndRaisinSlice.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 38,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk038",
+      "name": "Jammie Dodger Blondie",
+      "description": "Sweet & Delicious Jammie Dodger Blondies.",
+      "price": 16.0,
+      "category": 3,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/JammyDodgerBlondieSlice.png",
+      "image": "JammyDodgerBlondieSlice.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 39,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk039",
+      "name": "Peanut Butter Stuffed Cookies",
+      "description": "4 Peanut Butter Stuffed Cookies",
+      "price": 10.0,
+      "category": 4,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/PeanutButterStuffedCookie.png",
+      "image": "PeanutButterStuffedCookie.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 40,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk040",
+      "name": "Caramel Stuffed Cookies",
+      "description": "4 Caramel Stuffed Cookies",
+      "price": 10.0,
+      "category": 4,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/CaramelStuffedCookied.png",
+      "image": "CaramelStuffedCookied.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 41,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk041",
+      "name": "Sprinkle Double Cookies",
+      "description": "4 Sprinkle Double Cookies with a Vanilla filling in-between.",
+      "price": 10.0,
+      "category": 4,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/sprinkledDoubleCookie.png",
+      "image": "sprinkledDoubleCookie.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 42,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk042",
+      "name": "Peppermint Double Cookies",
+      "description": "4 Peppermint Double Cookies with a mint chocolate filling in-between.",
+      "price": 10.0,
+      "category": 4,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/peppermintDoubleCookie.png",
+      "image": "peppermintDoubleCookie.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 43,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk043",
+      "name": "Hazelnut Double Cookies",
+      "description": "4 Hazelnut Double Cookies with a chocolate hazelnut filling in-between.",
+      "price": 10.0,
+      "category": 4,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/hazelnutDoubleCookie.png",
+      "image": "hazelnutDoubleCookie.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 44,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk044",
+      "name": "Crispy M&M Double Cookies",
+      "description": "4 Crispy M&M Double Cookies with a chocolate filling in-between.",
+      "price": 10.0,
+      "category": 4,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/CrispyMMDoubleCookies.png",
+      "image": "CrispyMMDoubleCookies.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 45,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk045",
+      "name": "Sprinkle Cookies",
+      "description": "8 handmade Sprinkle Cookies",
+      "price": 10.0,
+      "category": 4,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/sprinkledCookie.png",
+      "image": "sprinkledCookie.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 46,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk046",
+      "name": "Peppermint Cookies",
+      "description": "8 handmade Peppermint Cookies",
+      "price": 10.0,
+      "category": 4,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/peppermintCookie.png",
+      "image": "peppermintCookie.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 47,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk047",
+      "name": "Hazelnut Cookies",
+      "description": "8 handmade Hazelnut Cookies",
+      "price": 10.0,
+      "category": 4,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/hazelnutCookie.png",
+      "image": "hazelnutCookie.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 48,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk048",
+      "name": "Crispy M&M Cookies",
+      "description": "8 handmade Crispy M&M Cookies",
+      "price": 10.0,
+      "category": 4,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/CrispyMMCookie.png",
+      "image": "CrispyMMCookie.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 49,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk049",
+      "name": "Nutella Stuffed Cookies",
+      "description": "4 Nutella Stuffed Cookies",
+      "price": 10.0,
+      "category": 4,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/NutellaStuffedCookie.png",
+      "image": "NutellaStuffedCookie.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 50,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk050",
+      "name": "Biscoff Stuffed Cookies",
+      "description": "4 Biscoff Stuffed Cookies",
+      "price": 10.0,
+      "category": 4,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/BiscoffStuffedCookie.png",
+      "image": "BiscoffStuffedCookie.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 51,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk050",
+      "name": "Vanilla Marshmallows",
+      "description": "Melt in your mouth marshmallows.",
+      "price": 6.0,
+      "category": 5,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/VanillaMarshmallows.png",
+      "image": "VanillaMarshmallows.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 52,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk052",
+      "name": "Strawberry Marshmallows",
+      "description": "Soft fluffy melt in your mouth marshmallows.",
+      "price": 6.0,
+      "category": 5,
+      "rating": 4.6,
+      "in_stock": true,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/strawberryMarshmallows.png",
+      "image": "strawberryMarshmallows.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 53,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk052",
+      "name": "Belgian Chocolate Easter Smash Eggs",
+      "description": "Belgian Chocolate Easter Smash Eggs.\n\n250g of Belgian chocolate and 250g of mixed jellies includes mini hammers perfect gift this Easter,",
+      "price": 9.5,
+      "category": [6, 7],
+      "rating": 4.6,
+      "in_stock": false,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2022/02/20220214_192534-scaled-e1644870129553.jpg",
+      "image": "20220214_192534-scaled-e1644870129553.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 54,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk054",
+      "name": "Christmas Cookies",
+      "description": "6 Christmas Pudding Cookies. Triple chocolate cookies dipped in white chocolate. A perfect Christmas snack.",
+      "price": 10.0,
+      "category": 6,
+      "rating": 4.6,
+      "in_stock": false,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/12/265117172_427940768990495_3808943259094837670_n-1.jpg",
+      "image": "265117172_427940768990495_3808943259094837670_n-1.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 55,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk055",
+      "name": "Chocolate Orange Robin",
+      "description": "Chocolate Orange Malteser Robin\n\nPerfect gift for Christmas.",
+      "price": 7.5,
+      "category": 6,
+      "rating": 4.6,
+      "in_stock": false,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/12/IMG_20211118_230450_226-scaled.jpg",
+      "image": "IMG_20211118_230450_226-scaled.jpg",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 56,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk056",
+      "name": "Santa Christmas Cake",
+      "description": "Handmade Santa Christmas cake\nBrighten up your festive period with this joyful high quality custom made Santa Christmas cake.\n\nPlease note these will be shipped from the 1st December though to the 15th of December these are a made to order and take a few days to make and decorate.",
+      "price": 40.0,
+      "category": 6,
+      "rating": 4.6,
+      "in_stock": false,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/santa.png",
+      "image": "santa.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 57,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk057",
+      "name": "Halloween Smash Skull",
+      "description": "Halloween smash skull. Chocolate skull with jellies inside. 15 x 21 x 6 centimetres.",
+      "price": 13.0,
+      "category": 7,
+      "rating": 4.6,
+      "in_stock": false,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2021/09/halloweenSmashSkull.png",
+      "image": "halloweenSmashSkull.png",
+      "ingredients": []
+    }
+  },
+  {
+    "pk": 58,
+    "model": "products.product",
+    "fields": {
+      "sku": "nk058",
+      "name": "Vegan Easter Smash Egg",
+      "description": "Vegan Chocolate Easter Smash Eggs.\n\n250g of chocolate and 250g of mixed jellies. Includes mini hammer. Perfect gift this Easter.\n\nThese are made fresh to order. Pre-order now! Dispatched from 25th March",
+      "price": 9.5,
+      "category": 7,
+      "rating": 4.6,
+      "in_stock": false,
+      "image_url": "https://nibblekitchen.co.uk/wp-content/uploads/2022/02/20220214_192534-scaled-e1644870129553.jpg",
+      "image": "20220214_192534-scaled-e1644870129553",
+      "ingredients": []
+    }
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "pk": 1,
+    "model": "products.category",
+    "fields": { "name": "cake_jar", "friendly_name": "Cakes In A Jar" }
+  },
+  {
+    "pk": 2,
+    "model": "products.category",
+    "fields": { "name": "brownies", "friendly_name": "Brownies" }
+  },
+  {
+    "pk": 3,
+    "model": "products.category",
+    "fields": { "name": "blondies", "friendly_name": "Blondies" }
+  },
+  {
+    "pk": 4,
+    "model": "products.category",
+    "fields": { "name": "cookies", "friendly_name": "Cookies" }
+  },
+  {
+    "pk": 5,
+    "model": "products.category",
+    "fields": { "name": "marshmallows", "friendly_name": "Marshmallows" }
+  },
+  {
+    "pk": 6,
+    "model": "products.category",
+    "fields": { "name": "seasonal", "friendly_name": "Seasonal" }
+  },
+  {
+    "pk": 7,
+    "model": "products.category",
+    "fields": { "name": "smashes", "friendly_name": "Smashes" }
+  },
+  {
+    "pk": 8,
+    "model": "products.category",
+    "fields": { "name": "new_arrivals", "friendly_name": "New Arrivals" }
+  },
+  {
+    "pk": 9,
+    "model": "products.category",
+    "fields": { "name": "deals", "friendly_name": "Deals" }
+  }
+]

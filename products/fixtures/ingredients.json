@@ -1,0 +1,2368 @@
+[
+  {
+    "id": 1,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "fortified_british_wheat_flour",
+      "friendly_name": "Fortified British Wheat Flour",
+      "is_allergen": false,
+      "has_sub_ingredient": true,
+      "sub_ingredients": [2, 3, 4, 5, 6],
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 2,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "wheat_flour",
+      "friendly_name": "Wheat Flour",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 3,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "calcium_carbonate",
+      "friendly_name": "Calcium Carbonate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 4,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "iron",
+      "friendly_name": "Iron",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 5,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "niacin",
+      "friendly_name": "Niacin",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 6,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "thiamin",
+      "friendly_name": "Thiamin",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 7,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "calcium_phosphate",
+      "friendly_name": "Calcium Phosphate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "2"
+    }
+  },
+  {
+    "id": 8,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sodium_hydrogen_carbonate",
+      "friendly_name": "Sodium Hydrogen Carbonate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "2"
+    }
+  },
+  {
+    "id": 9,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sodium_hydrogen_carbonate",
+      "friendly_name": "Sodium Hydrogen Carbonate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "2"
+    }
+  },
+  {
+    "id": 10,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "rapeseed_oil",
+      "friendly_name": "Rapeseed Oil",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "2"
+    }
+  },
+  {
+    "id": 11,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "water",
+      "friendly_name": "Water",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "2"
+    }
+  },
+  {
+    "id": 12,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "palm_oil",
+      "friendly_name": "Palm Oil",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "2"
+    }
+  },
+  {
+    "id": 13,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "salt",
+      "friendly_name": "Salt",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "2"
+    }
+  },
+  {
+    "id": 14,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "mono_and_diglycerides_of_fatty_acids",
+      "friendly_name": "Mono- and Diglycerides of Fatty Acids",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "3"
+    }
+  },
+  {
+    "id": 15,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "lactic_acid",
+      "friendly_name": "Lactic Acid",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "4"
+    }
+  },
+  {
+    "id": 16,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "flavouring",
+      "friendly_name": "Flavouring",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 17,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colour_carotenes",
+      "friendly_name": "Colour: Carotenes",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 18,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "vitamin_a",
+      "friendly_name": "Vitamin A",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 19,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "vitamin_d",
+      "friendly_name": "vitamin D",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 20,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "white_cane_sugar",
+      "friendly_name": "White Cane Sugar",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 21,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "egg",
+      "friendly_name": "Egg",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 22,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "maize_starch",
+      "friendly_name": "Maize Starch",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "5"
+    }
+  },
+  {
+    "id": 23,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "cows_milk",
+      "friendly_name": "Cows Milk",
+      "is_allergen": true,
+      "has_sub_ingredient": true,
+      "sub_ingredients": [24],
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 24,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "cream",
+      "friendly_name": "Cream",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 25,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "propylene_glycol_e1520",
+      "friendly_name": "Propylene Glycol E1520",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 26,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "flavouring_preperations",
+      "friendly_name": "Flavouring Preparations",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 27,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "banana",
+      "friendly_name": "Banana",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 28,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "inverted_sugar_syrup",
+      "friendly_name": "Invert Sugar Syrup",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 29,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "full_cream_sweetened",
+      "friendly_name": "Full Cream Sweetened",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 30,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "condensed_milk",
+      "friendly_name": "Condensed Milk",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 31,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colour_plain_caramel",
+      "friendly_name": "Colour: Plain Caramel",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 32,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "natural_flavouring",
+      "friendly_name": "Natural Flavouring",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 33,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "cane_sugar",
+      "friendly_name": "Cane Sugar",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 34,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "caramelised_sweetened_condensed_milk",
+      "friendly_name": "Caramelised Sweetened Condensed Milk",
+      "is_allergen": true,
+      "has_sub_ingredient": true,
+      "sub_ingredients": [23, 35],
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 35,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sugar",
+      "friendly_name": "Sugar",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 36,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "stabiliser",
+      "friendly_name": "Stabiliser",
+      "is_allergen": false,
+      "has_sub_ingredient": true,
+      "sub_ingredients": [37],
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 37,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "disodium_phosphate",
+      "friendly_name": "Disodium Phosphate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 38,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "glucose_fructose_syrup",
+      "friendly_name": "Glucose-Fructose Syrup",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 39,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "strawberries",
+      "friendly_name": "Strawberries",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 40,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "pectin",
+      "friendly_name": "Pectin",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "6"
+    }
+  },
+  {
+    "id": 41,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "citric_acid",
+      "friendly_name": "Citric Acid (E330)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "4"
+    }
+  },
+  {
+    "id": 42,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sodium_citrate",
+      "friendly_name": "Sodium Citrate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "4"
+    }
+  },
+  {
+    "id": 43,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "strawberry_concentrate",
+      "friendly_name": "Strawberry Concentrate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 44,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "dessicated_coconut",
+      "friendly_name": "Dessicated Coconut",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 45,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sulphur_dioxide",
+      "friendly_name": "Sulphur Dioxide",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "7"
+    }
+  },
+  {
+    "id": 46,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sunflower_oil",
+      "friendly_name": "Sunflower Oil",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 47,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "cocoa_powder",
+      "friendly_name": "Cocoa Powder",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 48,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "potassium_hydroxide",
+      "friendly_name": "Potassium Hydroxide",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "4"
+    }
+  },
+  {
+    "id": 49,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "potassium_carbonates",
+      "friendly_name": "Potassium Carbonates",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "4"
+    }
+  },
+  {
+    "id": 50,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "morello_cherries",
+      "friendly_name": "Morello Cherries",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 51,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "corn_starch",
+      "friendly_name": "Corn Starch",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 52,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "vanilla_extract",
+      "friendly_name": "Vanilla Extract",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 53,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "lemon_concentrate",
+      "friendly_name": "Lemon Concentrate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 54,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "vodka",
+      "friendly_name": "Vodka",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 55,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "ethanol",
+      "friendly_name": "Ethanol",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 56,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "mono_propylene_glycol",
+      "friendly_name": "Mono Propylene Glycol",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 57,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "bubblegum_flavourings",
+      "friendly_name": "Bubblegum Flavourings",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 58,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "glucose_syrup",
+      "friendly_name": "Glucose Syrup",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 59,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "glycerol_e422",
+      "friendly_name": "Glycerol (E422)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "8"
+    }
+  },
+  {
+    "id": 60,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colours_e133",
+      "friendly_name": "Colours (E133)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 61,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "starch",
+      "friendly_name": "Starch",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 62,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colours_e133",
+      "friendly_name": "Colours (E133)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 63,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sodium_citrates_e331",
+      "friendly_name": "Sodium Citrates (E331)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 64,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "agar_e406",
+      "friendly_name": "Agar (E406)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "9"
+    }
+  },
+  {
+    "id": 65,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "potassium_sorbate_e202",
+      "friendly_name": "Potassium Sorbate (E202)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "7"
+    }
+  },
+  {
+    "id": 66,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "butter",
+      "friendly_name": "Butter",
+      "is_allergen": false,
+      "has_sub_ingredient": true,
+      "sub_ingredients": [23],
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 65,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "soya_lecithin",
+      "friendly_name": "Soya Lecithin",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "3"
+    }
+  },
+  {
+    "id": 66,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "concentrated_lemon_juice",
+      "friendly_name": "Concentrated Lemon Juice",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 67,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "lemon_oil",
+      "friendly_name": "Lemon Oil",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 68,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "potassium_metabisulfate",
+      "friendly_name": "Potassium Metabisulfate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "10"
+    }
+  },
+  {
+    "id": 69,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "lemon_juice_from_concentrate",
+      "friendly_name": "Lemon Juice From Concentrate (8%)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 70,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "margarine",
+      "friendly_name": "Margarine",
+      "is_allergen": false,
+      "has_sub_ingredient": true,
+      "sub_ingredients": [10, 11, 12, 71],
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 71,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "palm_stearin",
+      "friendly_name": "Palm Stearin",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 72,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "dried_egg",
+      "friendly_name": "Dried Egg",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 73,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colours_beta_carotene",
+      "friendly_name": "Colours: Beta Carotene",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 74,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "lutein",
+      "friendly_name": "Lutein",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 75,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "carrot",
+      "friendly_name": "Carrot",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 76,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "walnuts",
+      "friendly_name": "Walnuts",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 77,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "partially_inverted_refiners_syrup",
+      "friendly_name": "Partially Inverted Refiners Syrup",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 78,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "cinammon",
+      "friendly_name": "Cinammon",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 79,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "coriander_seeds",
+      "friendly_name": "Coriander Seeds",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 80,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "dill_seeds",
+      "friendly_name": "Dill Seeds",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 81,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "ginger",
+      "friendly_name": "Ginger",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 82,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "cloves",
+      "friendly_name": "Cloves",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 83,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "nutmeg",
+      "friendly_name": "Nutmeg",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 84,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "lemon_rind",
+      "friendly_name": "Lemon Rind",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 85,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "icing_sugar",
+      "friendly_name": "Icing Sugar",
+      "is_allergen": false,
+      "has_sub_ingredient": true,
+      "sub_ingredients": [35, 85],
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 86,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "potato_starch",
+      "friendly_name": "Potato Starch",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 87,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "unhydrogenated_vegetable_fat",
+      "friendly_name": "Unhydrogenated Vegetable Fat",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 88,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "rapeseed_lecithin",
+      "friendly_name": "Rapeseed Lecithin",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "3"
+    }
+  },
+  {
+    "id": 89,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "shellac",
+      "friendly_name": "Shellac",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "10"
+    }
+  },
+  {
+    "id": 90,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "acacia_gum",
+      "friendly_name": "Acacia Gum",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "10"
+    }
+  },
+  {
+    "id": 91,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sugar",
+      "friendly_name": "Sugar",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "10"
+    }
+  },
+  {
+    "id": 92,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colour_e129_e104_e132_e110_e122_e124_e151",
+      "friendly_name": "Colour (E129, E104, E132, E110, E122, E124, E151)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "10"
+    }
+  },
+  {
+    "id": 93,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "coffee",
+      "friendly_name": "Coffee",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 94,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "orange_oil",
+      "friendly_name": "Orange Oil",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 95,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "cocoa_mass",
+      "friendly_name": "Cocoa Mass",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 96,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "cocoa_butter",
+      "friendly_name": "Cocoa Butter",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 97,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "skimmed_milk_powder",
+      "friendly_name": "Skimmed Milk Powder",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 98,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "whey_powder",
+      "friendly_name": "Whey Powder (from Milk)",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 99,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "vegetable_fats",
+      "friendly_name": "Vegetable Fats (Palm, Shea)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 100,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "milk_fat",
+      "friendly_name": "Milk Fat",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 101,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "e476",
+      "friendly_name": "E476",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "3"
+    }
+  },
+  {
+    "id": 102,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colour_e110",
+      "friendly_name": "Colour (E110)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 103,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sodium_benzoate_e211",
+      "friendly_name": "Sodium Benzoate (E211)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "7"
+    }
+  },
+  {
+    "id": 104,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "vegetable_fats_chocolate_mint",
+      "friendly_name": "Vegetables Fats (Palm/ Shea/ Sal/ Illipe/ Kokum Gurgi/ Mango Kernel, Sunflower)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 105,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "lactose_and_proteins_from_whey",
+      "friendly_name": "Lactose and Proteins from Whey (from Milk)",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 106,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "butterfat",
+      "friendly_name": "Butterfat (from Milk)",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 107,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sunflower_lecithin",
+      "friendly_name": "Sunflower Lecithin",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "3"
+    }
+  },
+  {
+    "id": 108,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colours_chocolate_mint",
+      "friendly_name": "Colours (Copper Complexes of Chlorophyllins, Curcumin, Tartrazine: E102, Brilliant Blue: E133)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "3"
+    }
+  },
+  {
+    "id": 109,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "milk_chocolate",
+      "friendly_name": "Milk Chocolate",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 110,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "mentha_piperita_peppermint_oil",
+      "friendly_name": "Mentha Piperita Peppermint Oil",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 111,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "blueberries",
+      "friendly_name": "Blueberries",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 112,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colour_strawberry_jar",
+      "friendly_name": "Colour (Carmoisine: E122, Tartrazine: E102)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 113,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colour_rainbow_jar",
+      "friendly_name": "Colour (Tartrazine: E102, Sunset Yellow FCF: E110, Carmoisine: E122, Brilliant Blue: E133)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 114,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "raspberries",
+      "friendly_name": "Raspberries",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 115,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "raspberry_concentrate",
+      "friendly_name": "Raspberry Concentrate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 116,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "hazelnuts",
+      "friendly_name": "Hazelnuts",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 117,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "fat_reduced_cocoa",
+      "friendly_name": "Fat Reduced Cocoa",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 118,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "vanillin",
+      "friendly_name": "Vanillin",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "3"
+    }
+  },
+  {
+    "id": 119,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "palm_fat",
+      "friendly_name": "Palm Fat",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 120,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "lactose",
+      "friendly_name": "Lactose",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 121,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "full_cream_milk_powder",
+      "friendly_name": "Full Cream Milk Powder",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 122,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "barley_malt_extract",
+      "friendly_name": "Barley Malt Extract",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 123,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "demineralised_whey_powder",
+      "friendly_name": "Demineralised Whey Powder (from Milk)",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 124,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "egg_white_powder",
+      "friendly_name": "Egg White Powder",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 125,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sodium_bicarbonate",
+      "friendly_name": "Sodium Bicarbonate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "2"
+    }
+  },
+  {
+    "id": 126,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "ammonium_bicarbonate",
+      "friendly_name": "Ammonium Bicarbonate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "2"
+    }
+  },
+  {
+    "id": 127,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "vegetable_fats_mint_brownie",
+      "friendly_name": "Vegetable Fats (Mango Kernel/ Palm/Sal/ Shea, Sunflower)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 128,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "dried_whole_milk",
+      "friendly_name": "Dried Whole Milk",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 129,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colours_mint_brownie",
+      "friendly_name": "Colours (Copper Complexes of Chlorophyllins, Curcumin)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 130,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "rasperry_flavoured_apple_jam",
+      "friendly_name": "Raspberry Flavoured Apple Jam",
+      "is_allergen": false,
+      "has_sub_ingredient": true,
+      "sub_ingredients": [38, 131],
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 131,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "apples",
+      "friendly_name": "Apples",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 132,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sodium_metabisulfite",
+      "friendly_name": "Sodium Metabisulfite",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "7"
+    }
+  },
+  {
+    "id": 133,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colour_jammie_dodger",
+      "friendly_name": "Colours (Anthocyanins, Annatto)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "7"
+    }
+  },
+  {
+    "id": 134,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "milk_chocolate_flavoured_coating",
+      "friendly_name": "Milk Chocolate Flavoured Coating",
+      "is_allergen": true,
+      "has_sub_ingredient": true,
+      "sub_ingredients": [35, 65, 95, 96, 97, 100, 120, 135],
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 135,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "polyglycerol_polyricinoleate",
+      "friendly_name": "Polyglycerol Polyricinoleate (E476)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 136,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "peanut_butter_creme_center",
+      "friendly_name": "Peanut Butter Crème Center",
+      "is_allergen": true,
+      "has_sub_ingredient": true,
+      "sub_ingredients": [13, 35, 96, 135, 137, 138, 139, 140],
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 137,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "peanuts",
+      "friendly_name": "Peanuts",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 138,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "dextrose",
+      "friendly_name": "Dextrose",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 139,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "partially_hydrogenated_vegetable_oil",
+      "friendly_name": "Partially Hydrogenated Vegetable Oil (Palm Kernel and Palm Oil)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 140,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "tbhq",
+      "friendly_name": "TBHQ (E319)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 141,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colour_paprika_extract",
+      "friendly_name": "Colour (Paprika Extract)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 142,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "cherry_juice_from_concentrate",
+      "friendly_name": "Cherry Juice From Concentrate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 143,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sodium_carbonate",
+      "friendly_name": "Sodium Carbonate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 144,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "pork_gelatin",
+      "friendly_name": "Pork Gelatin",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 145,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colour_beetroot_red",
+      "friendly_name": "Colour (Beetroot Red)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 146,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "natural_vanilla_flavouring",
+      "friendly_name": "Natural Vanilla Flavoring",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 147,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "white_chocolate",
+      "friendly_name": "White Chocolate",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 148,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "whey_whey_derivatives",
+      "friendly_name": "Whey and Whey Derivatives (Milk)",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 149,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "mallow",
+      "friendly_name": "Mallow",
+      "is_allergen": false,
+      "has_sub_ingredient": true,
+      "sub_ingredients": [41, 58, 150],
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 150,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "beef_gelatin",
+      "friendly_name": "Beef Gelatin",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 151,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "e450",
+      "friendly_name": "E450",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "2"
+    }
+  },
+  {
+    "id": 152,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "e500",
+      "friendly_name": "E500",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "2"
+    }
+  },
+  {
+    "id": 153,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "whey_permeate_powder",
+      "friendly_name": "Whey Permeate Powder (from Milk)",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 154,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "e442",
+      "friendly_name": "E442",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "3"
+    }
+  },
+  {
+    "id": 155,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "whole_cows_milk_powder",
+      "friendly_name": "Whole Cows Milk Powder",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 156,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "dried_cranberries",
+      "friendly_name": "Dried Cranberries",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 157,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "high_oleic_sunflower_oil",
+      "friendly_name": "High Oleic Sunflower Oil",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 158,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "vanilla_bean_extract",
+      "friendly_name": "Vanilla Bean Extract",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 159,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "alcohol_rum",
+      "friendly_name": "Alcohol (Rum)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 160,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "raisins",
+      "friendly_name": "Raisins",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 161,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "vegetable_oils_palm_rapeseed",
+      "friendly_name": "Vegetable Oils (Sustainable Palm, Rapeseed)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 162,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "roasted_peanuts",
+      "friendly_name": "Roasted Peanuts",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 163,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "vanilla_flavouring",
+      "friendly_name": "Vanilla Flavouring",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 164,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "rice_flour",
+      "friendly_name": "Rice Flour",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 165,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "carnauba_wax",
+      "friendly_name": "Carnauba Wax",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 166,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "original_caramelised_biscuits",
+      "friendly_name": "Original Caramelised Biscuits",
+      "is_allergen": true,
+      "has_sub_ingredient": true,
+      "sub_ingredients": [2, 35, 161],
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 167,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "candy_sugar_syrup",
+      "friendly_name": "Candy Sugar Syrup",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 168,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "soya_flour",
+      "friendly_name": "Soya Flour",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 169,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "cinnamon",
+      "friendly_name": "Cinnamon",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 170,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "acids_lactic_acid_malic_acid_citric_acid",
+      "friendly_name": "Acids (Lactic Acid, Malic Acid, Citric Acid)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 171,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "maltodextrin",
+      "friendly_name": "Maltodextrin",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 172,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "caramel_sugar_syrup",
+      "friendly_name": "Caramel Sugar Syrup",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 173,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "fruit_and_vegetable_concentrates",
+      "friendly_name": "Fruit and Vegetable Concentrates (Black Carrot, Spirulina, Safflower, Grape)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 174,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colours_curcumin_paprika_extract",
+      "friendly_name": "Colours (Curcumin, Paprika Extract)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 175,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "vegetable_oil_coconut",
+      "friendly_name": "Vegetable Oil (Coconut)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 176,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "butter_oil",
+      "friendly_name": "Butter Oil",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 177,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "xantham_gum",
+      "friendly_name": "Xantham Gum",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "11"
+    }
+  },
+  {
+    "id": 178,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "carboxymethylcellulose",
+      "friendly_name": "Carboxymethylcellulose",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "11"
+    }
+  },
+  {
+    "id": 179,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "palm_kernel_fat",
+      "friendly_name": "Palm Kernel Fat",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 180,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "palm_kernel_oil",
+      "friendly_name": "Palm Kernel Oil",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 181,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "e341_e500_e501",
+      "friendly_name": "E341, E500, E501",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "2"
+    }
+  },
+  {
+    "id": 182,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "wheat_gluten",
+      "friendly_name": "Wheat Gluten",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 183,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "colours_anthocyanins_carotenes",
+      "friendly_name": "Colours (Anthocyanins, Carotenes)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 184,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sultanas",
+      "friendly_name": "Sultanas",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 185,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "candied_mixed_peel",
+      "friendly_name": "Candied Mixed Peel",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 186,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "cherries",
+      "friendly_name": "Cherries",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 187,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sulphites",
+      "friendly_name": "Sulphites",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 188,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "cane_molasses",
+      "friendly_name": "Cane Molasses",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 189,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "lemon",
+      "friendly_name": "Lemon",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 190,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "almonds",
+      "friendly_name": "Almonds",
+      "is_allergen": true,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 191,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "apricots",
+      "friendly_name": "Apricots",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 192,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "alcohol_spiced_rum",
+      "friendly_name": "Alcohol (Spiced Rum)",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "1"
+    }
+  },
+  {
+    "id": 193,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "apple",
+      "friendly_name": "Apple",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 194,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "aronia",
+      "friendly_name": "Aronia",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 195,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "beetroot",
+      "friendly_name": "Beetroot",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 196,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "bilberry",
+      "friendly_name": "Bilberry",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 197,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "blackcurrant",
+      "friendly_name": "Blackcurrant",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 198,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "carrot",
+      "friendly_name": "Carrot",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 199,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "elderberry",
+      "friendly_name": "Elderberry",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 200,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "grape",
+      "friendly_name": "Grape",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 201,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "hibiscus",
+      "friendly_name": "Hibiscus",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 202,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "kiwi",
+      "friendly_name": "Kiwi",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 203,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "lemon",
+      "friendly_name": "Lemon",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 204,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "mango",
+      "friendly_name": "Mango",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 205,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "orange",
+      "friendly_name": "Orange",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 206,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "passion_fruit",
+      "friendly_name": "Passion Fruit",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 207,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "radish",
+      "friendly_name": "Radish",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 208,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "safflower",
+      "friendly_name": "Safflower",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 209,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "spirulina",
+      "friendly_name": "Spirulina",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 210,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "sweet_potato",
+      "friendly_name": "Sweet Potato",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "12"
+    }
+  },
+  {
+    "id": 211,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "beeswax",
+      "friendly_name": "Beeswax",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "10"
+    }
+  },
+  {
+    "id": 212,
+    "model": "products.ingredient",
+    "fields": {
+      "name": "elderberry_extract",
+      "friendly_name": "Elderberry Extract",
+      "is_allergen": false,
+      "has_sub_ingredient": false,
+      "sub_category": "10"
+    }
+  }
+]
