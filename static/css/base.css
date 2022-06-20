@@ -100,6 +100,15 @@ body {
     z-index: -1;
 }
 
+.frame {
+    min-height: 375px;
+}
+
+.card-img-top {
+    max-height: 375px !important;
+    width: auto !important;
+}
+
 
 /* -------------------------------- Media Queries */
 
@@ -122,5 +131,15 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }
