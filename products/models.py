@@ -37,7 +37,7 @@ class Ingredients(models.Model):
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
     is_allergen = models.BooleanField(default=False, null=True, blank=True)
     has_sub_ingredient = models.BooleanField(default=False, null=True, blank=True)
-    sub_ingredients = models.ManyToManyField('self', blank=True, null=True)
+    sub_ingredients = models.ManyToManyField('self', blank=True)
     sub_category = models.ForeignKey(Sub_Categories, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
@@ -56,7 +56,7 @@ class Product(models.Model):
     in_stock = models.BooleanField(default=False, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    ingredients = models.ForeignKey('Ingredients', null=True, blank=True, on_delete=models.SET_NULL)
+    ingredients = models.ManyToManyField('Ingredients', db_column='friendly_name', blank=True)
 
     def __str__(self):
         return self.name

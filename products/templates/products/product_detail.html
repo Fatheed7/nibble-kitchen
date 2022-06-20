@@ -43,6 +43,13 @@
         <p class="mt-3">{{ product.description }}</p>
       </div>
     </div>
+    <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+      <div class="ingredient-container mb-5">
+        {% for ingredient in ingredients %}
+        <p class="mb-0">{{ ingredient.friendly_name }}</p>
+        {% if ingredient.has_sub_ingredient %} Test {% endif %} {% endfor %}
+      </div>
+    </div>
   </div>
+  {% endblock %}
 </div>
-{% endblock %}

@@ -31,7 +31,9 @@
         Postal Cakes
       </a>
       <div class="dropdown-menu border-0" aria-labelledby="postal-cake-link">
-        <a href="" class="dropdown-item">Cakes In A Jar</a>
+        <a href="{% url 'products' %}?category=cake_jar" class="dropdown-item"
+          >Cakes In A Jar</a
+        >
       </div>
     </li>
 
@@ -48,8 +50,12 @@
         Tray Bakes
       </a>
       <div class="dropdown-menu border-0" aria-labelledby="tray-bakes-link">
-        <a href="" class="dropdown-item">Brownies</a>
-        <a href="" class="dropdown-item">Blondies</a>
+        <a href="{% url 'products' %}?category=brownies" class="dropdown-item"
+          >Brownies</a
+        >
+        <a href="{% url 'products' %}?category=blondies" class="dropdown-item"
+          >Blondies</a
+        >
       </div>
     </li>
 
@@ -66,10 +72,20 @@
         Treats &amp; Sweets
       </a>
       <div class="dropdown-menu border-0" aria-labelledby="treats-sweets-link">
-        <a href="" class="dropdown-item">Cookies</a>
-        <a href="" class="dropdown-item">Marshmallows</a>
-        <a href="" class="dropdown-item">Seasonal</a>
-        <a href="" class="dropdown-item">Smashes</a>
+        <a href="{% url 'products' %}?category=cookies" class="dropdown-item"
+          >Cookies</a
+        >
+        <a
+          href="{% url 'products' %}?category=marshmallows"
+          class="dropdown-item"
+          >Marshmallows</a
+        >
+        <a href="{% url 'products' %}?category=seasonal" class="dropdown-item"
+          >Seasonal</a
+        >
+        <a href="{% url 'products' %}?category=smashes" class="dropdown-item"
+          >Smashes</a
+        >
       </div>
     </li>
 
@@ -103,9 +119,19 @@
         Special Offers
       </a>
       <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-        <a href="" class="dropdown-item">New Arrivals</a>
-        <a href="" class="dropdown-item">Deals</a>
-        <a href="" class="dropdown-item">All Specials</a>
+        <a
+          href="{% url 'products' %}?category=new_arrivals"
+          class="dropdown-item"
+          >New Arrivals</a
+        >
+        <a href="{% url 'products' %}?category=deals" class="dropdown-item"
+          >Deals</a
+        >
+        <a
+          href="{% url 'products' %}?category=new_arrivals,deals"
+          class="dropdown-item"
+          >All Specials</a
+        >
       </div>
     </li>
   </ul>
