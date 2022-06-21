@@ -32,7 +32,22 @@
     <div class="col-12 col-md-6 col-lg-4">
       <div class="product-details-container mb-5 mt-md-5">
         <p class="mb-0">{{ product.name }}</p>
-        <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+		    {% if not product.in_stock %}
+				<b><i class="fa-solid fa-circle-xmark"></i> Out of Stock</b>
+            {% else %}
+			{% if product.on_sale %}
+                <p class="lead mb-0 text-left font-weight-bold"><s>£{{ product.price }}</s> £{{ product.sale_price }}</p>
+            {% else %}
+				<p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+            {% endif %}
+			{% endif %}
+		{% if product.category %}
+            <p class="small mt-1 mb-0">
+				<a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+					<i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                </a>
+            </p>
+        {% endif %}
         {% if product.rating %}
         <small class="text-muted"
           ><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small
@@ -46,8 +61,23 @@
     <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
       <div class="ingredient-container mb-5">
         {% for ingredient in ingredients %}
-        <p class="mb-0">{{ ingredient.friendly_name }}</p>
-        {% if ingredient.has_sub_ingredient %} Test {% endif %} {% endfor %}
+			{% if ingredient.is_allergen %}
+			<b>{{ ingredient.friendly_name }}</b>
+			{% else %}
+			   {{ ingredient.friendly_name }}
+			{% endif %}
+				{% if ingredient.has_sub_ingredient %} 
+					({% for sub in ingredient.sub_ingredients.all %}
+						{% if sub.is_allergen %}
+							<b>{{ sub.friendly_name }}</b>
+						{% else %}
+							{{ sub.friendly_name }}
+						{% endif %}
+						{% if not forloop.last %}, {% endif %}
+					{% endfor %})
+				{% endif %}
+			{% if not forloop.last %}, {% endif %}
+		{% endfor %}
       </div>
     </div>
   </div>

@@ -12,8 +12,16 @@
         >All Cakes</a
       >
       <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-        <a href="" class="dropdown-item">By Price</a>
-        <a href="" class="dropdown-item">By Rating</a>
+        <a
+          href="{% url 'products' %}?sort=sale_price&direction=asc"
+          class="dropdown-item"
+          >By Price</a
+        >
+        <a
+          href="{% url 'products' %}?sort=rating&direction=desc"
+          class="dropdown-item"
+          >By Rating</a
+        >
         <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
       </div>
     </li>
@@ -56,6 +64,11 @@
         <a href="{% url 'products' %}?category=blondies" class="dropdown-item"
           >Blondies</a
         >
+        <a
+          href="{% url 'products' %}?category=brownies,blondies"
+          class="dropdown-item"
+          >View All Tray Bakes</a
+        >
       </div>
     </li>
 
@@ -85,6 +98,11 @@
         >
         <a href="{% url 'products' %}?category=smashes" class="dropdown-item"
           >Smashes</a
+        >
+        <a
+          href="{% url 'products' %}?category=cookies,marshmallows,seasonal,smashes"
+          class="dropdown-item"
+          >View All Treats &amp; Sweets</a
         >
       </div>
     </li>
@@ -124,9 +142,7 @@
           class="dropdown-item"
           >New Arrivals</a
         >
-        <a href="{% url 'products' %}?category=deals" class="dropdown-item"
-          >Deals</a
-        >
+        <a href="{% url 'products' %}?deals" class="dropdown-item">Deals</a>
         <a
           href="{% url 'products' %}?category=new_arrivals,deals"
           class="dropdown-item"

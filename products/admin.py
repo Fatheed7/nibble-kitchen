@@ -6,7 +6,7 @@ from sortedm2m_filter_horizontal_widget.forms import SortedFilteredSelectMultipl
 # Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('sku', 'name', 'category', 'price', 'rating', 'image_url')
+    list_display = ('sku', 'name', 'category', 'in_stock', 'price', 'on_sale', 'sale_price', 'rating', 'image_url')
     search_fields = ('name',)
     ordering = ('sku',)
     list_filter = ('category',)
