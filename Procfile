@@ -1,1 +1,1 @@
-web: gunicorn nibble-kitchen.wsgi:application
+web: gunicorn nibble_kitchen.wsgi:application
