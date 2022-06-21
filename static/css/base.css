@@ -25,6 +25,12 @@ body {
     top: 5%
 }
 
+.nav-list-menus {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -39,6 +45,20 @@ body {
 .btn-black {
     background: black;
     color: white;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important;
+    /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 .shop-now-button:hover,
@@ -113,7 +133,9 @@ a.category-badge>span.badge:hover {
     right: 10px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
 }
 
@@ -147,7 +169,7 @@ a.category-badge>span.badge:hover {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 185px;
     }
 }
 

@@ -32,23 +32,24 @@
     <div class="col-12 col-md-6 col-lg-4">
       <div class="product-details-container mb-5 mt-md-5">
         <p class="mb-0">{{ product.name }}</p>
-		    {% if not product.in_stock %}
-				<b><i class="fa-solid fa-circle-xmark"></i> Out of Stock</b>
-            {% else %}
-			{% if product.on_sale %}
-                <p class="lead mb-0 text-left font-weight-bold"><s>£{{ product.price }}</s> £{{ product.sale_price }}</p>
-            {% else %}
-				<p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
-            {% endif %}
-			{% endif %}
-		{% if product.category %}
-            <p class="small mt-1 mb-0">
-				<a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-					<i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                </a>
-            </p>
-        {% endif %}
-        {% if product.rating %}
+        {% if not product.in_stock %}
+        <b><i class="fa-solid fa-circle-xmark"></i> Out of Stock</b>
+        {% else %} {% if product.on_sale %}
+        <p class="lead mb-0 text-left font-weight-bold">
+          <s>£<span id="price">{{ product.price }}</span></s> £<span id="salePrice">{{ product.sale_price }}</span>
+        </p>
+        {% else %}
+        <p class="lead mb-0 text-left font-weight-bold">£<span id="price">{{ product.price }}</span></p>
+        {% endif %} {% endif %} {% if product.category %}
+        <p class="small mt-1 mb-0">
+          <a
+            class="text-muted"
+            href="{% url 'products' %}?category={{ product.category.name }}"
+          >
+            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+          </a>
+        </p>
+        {% endif %} {% if product.rating %}
         <small class="text-muted"
           ><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small
         >
@@ -56,30 +57,130 @@
         <small class="text-muted">No Rating</small>
         {% endif %}
         <p class="mt-3">{{ product.description }}</p>
+        <form
+          class="form"
+          action="{% url 'add_to_cart' product.id %}"
+          method="POST"
+        >
+          {% csrf_token %}
+          <div class="form-row">
+            {% with product.has_sizes as s %} {% if s %}
+            <div class="col-12">
+              <p><strong>Size:</strong></p>
+              <select
+                class="form-control rounded-0 w-50"
+                name="product_size"
+                id="id_product_size"
+              >
+                <option value="s" selected>Small</option>
+                <option value="m">Medium</option>
+                <option value="l">Large</option>
+              </select>
+            </div>
+            {% endif %}
+            <div class="col-12">
+              <p class="mt-3"><strong>Quantity:</strong></p>
+              <div class="form-group w-50">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <button
+                      class="decrement-qty btn btn-black rounded-0"
+                      data-item_id="{{ product.id }}"
+                      id="decrement-qty_{{ product.id }}"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-minus"></i>
+                      </span>
+                    </button>
+                  </div>
+                  <input
+                    class="form-control qty_input"
+                    type="number"
+                    name="quantity"
+                    value="1"
+                    min="1"
+                    max="99"
+                    data-item_id="{{ product.id }}"
+                    id="id_qty_{{ product.id }}"
+                  />
+                  <div class="input-group-append">
+                    <button
+                      class="increment-qty btn btn-black rounded-0"
+                      data-item_id="{{ product.id }}"
+                      id="increment-qty_{{ product.id }}"
+                    >
+                      <span class="icon">
+                        <i class="fas fa-plus"></i>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col{% if s %}-12 mt-2{% endif %}">
+              <a
+                href="{% url 'products' %}"
+                class="btn btn-outline-black rounded-0 mt-5"
+              >
+                <span class="icon">
+                  <i class="fas fa-chevron-left"></i>
+                </span>
+                <span class="text-uppercase">Keep Shopping</span>
+              </a>
+              <input
+                type="submit"
+                class="btn btn-black rounded-0 text-uppercase mt-5"
+                value="Add to Cart"
+              />
+            </div>
+            <input
+              type="hidden"
+              name="redirect_url"
+              value="{{ request.path }}"
+            />
+            {% endwith %}
+          </div>
+        </form>
       </div>
     </div>
-    <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+    </div>
+    <!-- prettier-ignore -->
+    <div class="row">
+    <div class="col-12 col-md-6 col-lg-8 offset-lg-2">
       <div class="ingredient-container mb-5">
-        {% for ingredient in ingredients %}
-			{% if ingredient.is_allergen %}
-			<b>{{ ingredient.friendly_name }}</b>
-			{% else %}
-			   {{ ingredient.friendly_name }}
-			{% endif %}
-				{% if ingredient.has_sub_ingredient %} 
-					({% for sub in ingredient.sub_ingredients.all %}
-						{% if sub.is_allergen %}
-							<b>{{ sub.friendly_name }}</b>
-						{% else %}
-							{{ sub.friendly_name }}
-						{% endif %}
-						{% if not forloop.last %}, {% endif %}
-					{% endfor %})
-				{% endif %}
-			{% if not forloop.last %}, {% endif %}
-		{% endfor %}
+        {% for ingredient in ingredients %} 
+          {% if ingredient.is_allergen %}
+            <b>{{ ingredient.friendly_name }}</b>
+          {% else %} 
+            {{ ingredient.friendly_name }} 
+          {% endif %} 
+          
+          {% if ingredient.has_sub_ingredient %} 
+            ({% for sub in ingredient.sub_ingredients.all %}
+              {% if sub.is_allergen %}
+                <b>{{ sub.friendly_name }}</b>
+              {% else %} 
+                {{ sub.friendly_name }}
+              {% endif %} 
+              
+              {% if not forloop.last %}
+                , 
+              {% endif %} 
+            {% endfor %}) 
+            {% endif %} 
+            {% if not forloop.last %}
+            , 
+            {%endif %} 
+        {% endfor %}
       </div>
+    </div>
     </div>
   </div>
   {% endblock %}
 </div>
+{% block postloadjs %} {{ block.super }}
+<!-- prettier-ignore -->
+{% include 'products/includes/quantity_input_script.html' %}
+{% include 'products/includes/size_update_script.html' %}
+{% endblock %}

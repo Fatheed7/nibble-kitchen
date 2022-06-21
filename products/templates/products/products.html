@@ -87,11 +87,20 @@
                   <i class="fa-solid fa-circle-xmark"></i> Out of Stock
                   {% else %}
                   {% if product.on_sale %}
+                    {% if product.has_sizes %}
+                    £{{product.sale_price}} - £{{product.large_sale_price}}
+                    {% else %}
                     <s>£{{ product.price }}</s> £{{ product.sale_price }}
+                    {% endif %}
                   {% else %}
-                    £{{ product.price }}
+                    {% if product.has_sizes %}
+                      £{{product.price}} - £{{product.large_price}}
+                    {% else %}
+                      £{{ product.price }}
                   {% endif %}
                   {% endif %}
+                  {% endif %}
+
                   </p>
                   {% if product.category %}
                     <p class="small mt-1 mb-0 text-center">
