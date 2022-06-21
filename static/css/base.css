@@ -220,6 +220,9 @@ a.category-badge>span.badge:hover {
     width: 100%;
 }
 
+.sort-select-wrapper {
+    display: contents !important;
+}
 
 /* -------------------------------- Media Queries */
 
