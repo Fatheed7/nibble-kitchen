@@ -10,6 +10,12 @@ body {
     font-family: 'Montserrat';
 }
 
+.error {
+    background: url('/media/hello-i-m-nik-LUYD2b7MNrg-unsplash.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 185px);
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
