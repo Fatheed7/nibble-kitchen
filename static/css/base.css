@@ -313,6 +313,10 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+figcaption {
+    text-align: center;
+}
+
 
 /* -------------------------------- Media Queries */
 
@@ -348,6 +352,12 @@ input[name='q']::placeholder {
     }
 }
 
+@media (max-width: 1400px) {
+    .main-logo {
+        width: 15vw;
+    }
+}
+
 
 .display-4.logo-font.text-black {
     font-size: 2rem;
@@ -367,7 +377,7 @@ input[name='q']::placeholder {
 }
 
 #delivery-banner h4 {
-    font-size: .9rem;
+    font-size: 1.2rem;
 }
 
 .btn.btn-outline-black.rounded-0,
@@ -384,4 +394,11 @@ input[name='q']::placeholder {
 .increment-qty,
 .decrement-qty {
     padding: .25rem .5rem !important;
+}
+
+.img-thumbnail {
+    object-fit: cover;
+    height: 35vh !important;
+    max-height: 304px !important;
+    width: 100%;
 }
