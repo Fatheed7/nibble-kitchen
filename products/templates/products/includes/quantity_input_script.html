@@ -6,7 +6,6 @@
     let plusDisabled = currentValue > 98;
     let newValueMinus = newValue < 1;
     let newValuePlus = newValue > 98;
-    console.log(newValue);
     if (newValueMinus == true) {
       $(`.decrement_${itemId}`).prop("disabled", newValueMinus);
     } else {

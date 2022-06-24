@@ -20,9 +20,9 @@ body {
 }
 
 .main-logo {
-    width: 10vw;
+    width: 8vw;
     position: absolute;
-    top: 5%
+    top: 10%
 }
 
 .nav-list-menus {
@@ -139,6 +139,11 @@ a.category-badge>span.badge:hover {
     cursor: pointer;
 }
 
+.update-link,
+.remove-item {
+    margin-top: 5px !important;
+}
+
 input[name='q']::placeholder {
     color: #aab7c4;
 }
@@ -169,7 +174,7 @@ input[name='q']::placeholder {
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
-    right: 36px;
+    right: 5%;
 }
 
 /* Convenience classes - colors copied from Bootstrap */
@@ -352,7 +357,7 @@ figcaption {
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1360px) {
     .main-logo {
         width: 15vw;
     }
@@ -401,4 +406,14 @@ figcaption {
     height: 35vh !important;
     max-height: 304px !important;
     width: 100%;
+}
+
+.search-button {
+    position: relative;
+    left: -100%;
+    z-index: 100 !important;
+}
+
+.wrapper {
+    text-align: center;
 }

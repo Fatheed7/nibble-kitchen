@@ -53,16 +53,16 @@
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <img src="{{ MEDIA_URL }}cropped-logo.png" alt="Nibble Kitchen" class="main-logo">
+                    <img src="{% static 'cropped-logo.png' %}" alt="Nibble Kitchen" class="main-logo">
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q"
+                        <input class="form-control rounded-pill border border-black rounded-0 search-box" type="text" name="q"
                             placeholder="Search our site">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                            <button class="form-control rounded-pill btn btn-black border border-black rounded-0 search-button" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
@@ -103,7 +103,7 @@
                                     {% if total %}
                                     £{{ total|floatformat:2 }}<br><small>
                                     <!-- prettier-ignore -->
-                                    {{ cart_items | length }} item{% if cart_items|length > 1 %}s{% endif %}</small>
+                                    {{ cart_items | length }} item{{cart_items|pluralize}}</small>
                                     {% else %}
                                     £0.00
                                     {% endif %}

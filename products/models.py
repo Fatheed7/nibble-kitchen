@@ -1,4 +1,5 @@
 from django.db import models
+from sortedm2m.fields import SortedManyToManyField
 
 class Category(models.Model):
 
@@ -63,7 +64,7 @@ class Product(models.Model):
     in_stock = models.BooleanField(default=False, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    ingredients = models.ManyToManyField('Ingredients', db_column='friendly_name', blank=True)
+    ingredients = SortedManyToManyField('Ingredients', db_column='friendly_name', blank=True)
 
     def __str__(self):
         return self.name

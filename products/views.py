@@ -1,10 +1,17 @@
+from multiprocessing.sharedctypes import Value
+from platform import java_ver
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
-from .models import Product, Category
+from django.db.models import Q, ExpressionWrapper,BooleanField
+from .models import Ingredients, Product, Category, Sub_Categories
 from .forms import ProductForm
 from django.db.models.functions import Lower
+from django.http import HttpResponse
+
+import json
+from collections import Counter
+
 
 # Create your views here.
 
@@ -68,7 +75,7 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
-
+    
     product = get_object_or_404(Product, pk=product_id)
 
     context = {

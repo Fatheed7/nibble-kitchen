@@ -7,7 +7,7 @@
 {% endblock %} {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
-  <div class="row">
+  <div class="row gallery">
     <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
       <div class="image-container my-5">
         {% if product.image %}
@@ -21,7 +21,7 @@
         {% else %}
         <a href="">
           <img
-            class="card-img-top img-fluid"
+            class="card-img-top img-fluid img-thumbnail"
             src="{{ MEDIA_URL }}noimage.png"
             alt="{{ product.name }}"
           />
@@ -36,10 +36,15 @@
         <b><i class="fa-solid fa-circle-xmark"></i> Out of Stock</b>
         {% else %} {% if product.on_sale %}
         <p class="lead mb-0 text-left font-weight-bold">
-          <s>£<span id="price">{{ product.price }}</span></s> £<span id="salePrice">{{ product.sale_price }}</span>
+          <s>£<span id="price">{{ product.price }}</span></s> £<span
+            id="salePrice"
+            >{{ product.sale_price }}</span
+          >
         </p>
         {% else %}
-        <p class="lead mb-0 text-left font-weight-bold">£<span id="price">{{ product.price }}</span></p>
+        <p class="lead mb-0 text-left font-weight-bold">
+          £<span id="price">{{ product.price }}</span>
+        </p>
         {% endif %} {% endif %} {% if product.category %}
         <p class="small mt-1 mb-0">
           <a
@@ -55,12 +60,13 @@
         >
         {% else %}
         <small class="text-muted">No Rating</small>
-        {% endif %}
-        {% if request.user.is_superuser %}
-          <small class="ml-3">
-          <a href="{% url 'edit_product' product.id %}">Edit</a> | 
-          <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
-          </small>
+        {% endif %} {% if request.user.is_superuser %}
+        <small class="ml-3">
+          <a href="{% url 'edit_product' product.id %}">Edit</a> |
+          <a class="text-danger" href="{% url 'delete_product' product.id %}"
+            >Delete</a
+          >
+        </small>
         {% endif %}
         <p class="mt-3">{{ product.description }}</p>
         <form
@@ -83,11 +89,8 @@
                 <option value="l">Large</option>
               </select>
             </div>
-            {% endif %}
-            
-			{% if not product.in_stock %}
-			{% else %}
-			<div class="col-12">
+            {% endif %} {% if not product.in_stock %} {% else %}
+            <div class="col-12">
               <p class="mt-3"><strong>Quantity:</strong></p>
               <div class="form-group w-50">
                 <div class="input-group">
@@ -125,9 +128,8 @@
                   </div>
                 </div>
               </div>
-			</div>
-			 {% endif %}
- 
+            </div>
+            {% endif %}
 
             <div class="col{% if s %}-12 mt-2{% endif %}">
               <a
@@ -139,14 +141,13 @@
                 </span>
                 <span class="text-uppercase">Keep Shopping</span>
               </a>
-			{% if not product.in_stock %}
-			{% else %}
+              {% if not product.in_stock %} {% else %}
               <input
                 type="submit"
                 class="btn btn-black rounded-0 text-uppercase mt-5"
                 value="Add to Cart"
               />
-			{% endif %}
+              {% endif %}
             </div>
             <input
               type="hidden"
@@ -158,32 +159,54 @@
         </form>
       </div>
     </div>
-    </div>
-    <!-- prettier-ignore -->
-    <div class="row">
-    <div class="col-12 col-md-6 col-lg-8 offset-lg-2">
-      <div class="ingredient-container mb-5">
-        {% for ingredient in ingredients %}
-          {% if ingredient.is_allergen %}
-            <b>{{ ingredient.friendly_name }}</b>
-          {% else %}
-            {{ ingredient.friendly_name }}
-          {% endif %}
-          
-          {% if ingredient.has_sub_ingredient %}
-            ({% for sub in ingredient.sub_ingredients.all %}
-              {% if sub.is_allergen %}
-                <b>{{sub.friendly_name}}</b>
+  </div>
+  <!-- prettier-ignore -->
+  <div class="row">
+      <div class="col-12 col-md-12 col-lg-8 offset-lg-2">
+        <div class="ingredient-container mb-2">
+          <h2 class="logo-font text-center">Ingredients</h2>
+          <hr>
+          <div class="wrapper">
+            {% for ingredient in ingredients %}
+              {% if ingredient.is_allergen %}
+                <b>{{ ingredient.friendly_name }}</b>
               {% else %}
-                {{sub.friendly_name}}
+                {{ ingredient.friendly_name }}
               {% endif %}
-              {% if not forloop.last %},{% endif %}
-            {% endfor %})
-            {% endif %}
-            {% if not forloop.last %},{%endif %}
-        {% endfor %}
+              {% if ingredient.has_sub_ingredient %}
+                ({% for sub in ingredient.sub_ingredients.all %}
+                  {% if sub.is_allergen %}
+                    <b>{{sub.friendly_name}}</b>
+                  {% else %}
+                    {{sub.friendly_name}}
+                  {% endif %}
+                  {% if not forloop.last %},{% endif %}
+                {% endfor %})
+                {% endif %}
+                {% if not forloop.last %},{%endif %}
+            {% endfor %}
+          </div>
+        </div>
+        <hr />
       </div>
     </div>
+
+  <div class="row">
+    <div class="col-12 col-md-12 col-lg-8 offset-lg-2">
+      <div class="wrapper mb-2">
+        <h3 class="logo-font text-center">Disclaimer</h3>
+        <hr />
+        <p>
+          We use the following allergens in our kitchen: Gluten, Eggs, Milk,
+          Nuts, Peanuts, Sulphur Dioxide, Soya Lecithin.
+        </p>
+        <p>
+          All of our products are baked in a single kitchen and at the same
+          time, so there may be cross contamination between products. If you
+          have a specific question regarding an allergen please feel free to
+          contact us.
+        </p>
+      </div>
     </div>
   </div>
   {% endblock %}
