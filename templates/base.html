@@ -162,6 +162,101 @@
     {% block content %}
     {% endblock %}
 
+{% if request.path == "/"%}
+{% else%}
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section
+    class="d-flex justify-content-center p-4 border-bottom"
+  >
+    <div text-center>
+      <a href="https://www.tiktok.com/@nibblekitchen" class="me-4 text-reset">
+        <i class="fa-brands fa-tiktok social-media-icon"></i>
+      </a>
+      <a href="https://www.facebook.com/nibblycakes/" class="me-4 text-reset">
+        <i class="fab fa-facebook-f social-media-icon"></i>
+      </a>
+      <a href="https://twitter.com/nibblynibbles" class="me-4 text-reset">
+        <i class="fab fa-twitter social-media-icon"></i>
+      </a>
+      <a href="https://www.instagram.com/nibble_kitchen/" class="me-4 text-reset">
+        <i class="fab fa-instagram social-media-icon"></i>
+      </a>
+    </div>
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-4">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-5 col-xl-6 mx-auto mb-4">
+          <!-- Content -->
+          <p class="text-uppercase text-center fw-bold mb-3">
+            <i class="fas fa-gem me-3"></i>About Us
+          </p>
+          <div class="text-center">
+            <p>
+            We are a small business based in Cramlington NE23, Northumberland.
+            </p>
+            <p>
+            We only ship within the United Kingdom & products are shipped Monday to Thursday, 4 days a week. 
+            </p>
+            <p>
+            Ordering before 1pm ensures that your order can be made & shipped out next day.
+            </p>
+          </div>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mb-4">
+          <!-- Links -->
+          <p class="text-uppercase text-center fw-bold mb-3">
+            Useful links
+          </p>
+          <div class="text-center">
+          <p>
+            <a href="#!" class="text-reset">Refunds & Returns</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Postage & Packaging</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Privacy Policy</a>
+          </p>
+          </div>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-5 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <p class="text-uppercase text-center fw-bold mb-3">
+            Contact
+          </p>
+          <div class="text-center">
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@nibblekitchen.co.uk
+          </p>
+          <p><i class="fas fa-phone me-3"></i>07761 931791</p>
+          <p><i class="fa-brands fa-whatsapp me-3"></i>07761 931791</p>
+          </div>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+</footer>
+<!-- Footer -->
+{% endif %}
     {% block postloadjs %}
     <script type="text/javascript">
     $(document).ready(function() {
