@@ -68,6 +68,9 @@
                                 </span>
                             </button>
                         </div>
+                            <div class="invalid-tooltip">
+                                    Please enter a valid search term!
+                            </div>
                     </div>
                 </form>
             </div>
@@ -169,6 +172,13 @@
             }
         });
         });
+
+        $(".search-button").click(function(){ 
+            if ($(".search-box").val().length === 0 ) {
+                event.preventDefault();
+                $(".invalid-tooltip").show();
+            };
+        })
     </script>
     {% endblock %}
 

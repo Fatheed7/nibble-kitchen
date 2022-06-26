@@ -3,9 +3,10 @@
     class="text-black nav-link d-block d-lg-none"
     href="#"
     id="mobile-search"
-    data-toggle="dropdown"
+    data-bs-toggle="dropdown"
     aria-haspopup="true"
     aria-expanded="false"
+    data-bs-auto-close="false"
   >
     <div class="text-center">
       <div><i class="fas fa-search fa-lg"></i></div>
@@ -19,14 +20,14 @@
     <form class="form" method="GET" action="{% url 'products' %}">
       <div class="input-group w-100">
         <input
-          class="form-control border border-black rounded-0"
+          class="form-control rounded-pill border border-black rounded-0"
           type="text"
           name="q"
           placeholder="Search our site"
         />
         <div class="input-group-append">
           <button
-            class="form-control form-control btn btn-black border border-black rounded-0"
+            class="form-control form-control rounded-pill btn btn-black border border-black rounded-0 search-button mobile-search-button"
             type="submit"
           >
             <span class="icon">
@@ -34,6 +35,7 @@
             </span>
           </button>
         </div>
+        <div class="invalid-tooltip">Please enter a valid search term!</div>
       </div>
     </form>
   </div>
@@ -43,7 +45,7 @@
     class="text-black nav-link d-block d-lg-none"
     href="#"
     id="user-options"
-    data-toggle="dropdown"
+    data-bs-toggle="dropdown"
     aria-haspopup="true"
     aria-expanded="false"
   >

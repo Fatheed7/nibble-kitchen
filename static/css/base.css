@@ -417,3 +417,9 @@ figcaption {
 .wrapper {
     text-align: center;
 }
+
+.invalid-tooltip {
+    text-align: center !important;
+    width: 90% !important;
+    border-radius: 2rem !important;
+}
