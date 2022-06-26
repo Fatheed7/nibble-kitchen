@@ -223,6 +223,7 @@ input[name='q']::placeholder {
 .card-img-top {
     max-height: 375px !important;
     width: auto !important;
+    border-radius: 3%;
 }
 
 .cart-btn {

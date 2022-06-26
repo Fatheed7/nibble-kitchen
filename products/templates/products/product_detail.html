@@ -1,4 +1,6 @@
 {% extends "base.html" %} {% load static %} {% block page_header %}
+<!-- prettier-ignore -->
+{% load mathfilters %}
 <div class="container header-container">
   <div class="row">
     <div class="col"></div>
@@ -39,6 +41,9 @@
           <s>£<span id="price">{{ product.price }}</span></s> £<span
             id="salePrice"
             >{{ product.sale_price }}</span
+          >
+          <span class="badge bg-secondary"
+            >-{{product.price|sub:product.sale_price|div:product.price|mul:100|floatformat}}%</span
           >
         </p>
         {% else %}

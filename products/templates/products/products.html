@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% load static %} {% block page_header %}
+{% extends "base.html" %} {% load static %} {% block page_header %} {% load mathfilters %}
 <div class="container header-container">
   <div class="row">
     <div class="col"></div>
@@ -88,9 +88,10 @@
                   {% else %}
                   {% if product.on_sale %}
                     {% if product.has_sizes %}
-                    £{{product.sale_price}} - £{{product.large_sale_price}}
+                    £{{product.sale_price}} - £{{product.large_sale_price}} 
                     {% else %}
-                    <s>£{{ product.price }}</s> £{{ product.sale_price }}
+                    <s>£{{ product.price }}</s> £{{ product.sale_price }} 
+                    <span class="badge bg-secondary">-{{product.price|sub:product.sale_price|div:product.price|mul:100|floatformat}}%</span>
                     {% endif %}
                   {% else %}
                     {% if product.has_sizes %}
