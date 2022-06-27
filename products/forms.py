@@ -1,7 +1,7 @@
 from django import forms
+from django.contrib.admin.widgets import FilteredSelectMultiple
 from .widgets import CustomClearableFileInput
 from .models import Ingredients, Product, Category
-
 
 class ProductForm(forms.ModelForm):
 
@@ -10,6 +10,11 @@ class ProductForm(forms.ModelForm):
         fields = '__all__'
 
     image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    ingredients = forms.ModelMultipleChoiceField(queryset=Ingredients.objects.all(), widget=FilteredSelectMultiple("Ingredients", False))
+
+    class Media:
+        js = ('/admin/jsi18n/',)
+
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

@@ -1,6 +1,11 @@
-{% extends "base.html" %} {% load static %}{% block extra_css %}
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+<!-- prettier-ignore -->
+{% block extra_title %} - Add Product {%endblock %} 
+{%load static %}{% block extra_css %}
 <link rel="stylesheet" href="{% static 'products/css/products.css' %}" />
-{% endblock %} {% block page_header %}
+<link rel="stylesheet" href="{% static 'admin/css/widgets.css' %}" />
+{{ form.media }} {% endblock %} {% block page_header %}
 <div class="container header-container">
   <div class="row">
     <div class="col"></div>
@@ -10,7 +15,7 @@
 <div class="overlay"></div>
 <div class="container">
   <div class="row">
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-8 offset-md-2">
       <hr />
       <h2 class="logo-font mb-4">Product Management</h2>
       <h5 class="text-muted">Add a Product</h5>
@@ -19,7 +24,7 @@
   </div>
 
   <div class="row">
-    <div class="col-12 col-md-6">
+    <div class="col-12 col-md-8 offset-md-2">
       <form
         method="POST"
         action="{% url 'add_product' %}"
@@ -49,4 +54,5 @@
     $("#filename").text(`Image will be set to: ${file.name}`);
   });
 </script>
+<script type="text/javascript" src="/admin/jsi18n"></script>
 {% endblock %}

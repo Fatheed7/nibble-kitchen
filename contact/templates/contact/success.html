@@ -1,0 +1,27 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% block extra_title %}
+- Contact Us
+{% endblock %}
+{% load static %}
+{% block page_header %} 
+ {% endblock %} {% block content %}
+<div class="overlay"></div>
+<div class="container-fluid header-container">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-md-3 mb-3 text-center">
+      <h1>Thank for getting in touch with us.</h1>
+      <p>We've got your message, and we'll be in touch as soon as possible.</p>
+      <div class="my-5">
+        <h4>
+          <a
+            href="{% url 'products' %}"
+            class="shop-now-button btn btn-lg rounded-pill text-uppercase py-3"
+            >Shop Now</a
+          >
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

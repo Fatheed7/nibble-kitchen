@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'storages',
     'celebrationcakes',
     'footer_content',
+    'contact',
     # Other
     'crispy_forms',
     'sortedm2m',

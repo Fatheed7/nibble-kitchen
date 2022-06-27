@@ -162,7 +162,6 @@
     {% block content %}
     {% endblock %}
 
-<!-- Hides footer on home page -->
 {% if request.path == "/"%}
 {% else%}
 
@@ -231,7 +230,7 @@
           <div class="text-center">
           <p>
             <i class="fas fa-envelope me-3"></i>
-            info@nibblekitchen.co.uk
+            <a href="mailto:info@nibblekitchen.co.uk" class="text-reset">info@nibblekitchen.co.uk</a>
           </p>
           <p><i class="fas fa-phone me-3"></i>07761 931791</p>
           <p><i class="fa-brands fa-whatsapp me-3"></i>07761 931791</p>

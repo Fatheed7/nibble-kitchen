@@ -1,0 +1,28 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% block extra_title %}
+- Contact Us
+{% endblock %}
+{% load static %}
+{% block page_header %} 
+{% block extra_css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'contact/css/contact.css' %}"
+/>
+{% endblock %} {% endblock %} {% block content %}
+<div class="overlay"></div>
+<div class="container-fluid header-container">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-md-3 mb-3">
+      <form action="" method="post">
+        {% csrf_token %} {{ form }}
+        <div class="contact-button">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

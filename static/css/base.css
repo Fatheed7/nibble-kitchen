@@ -430,13 +430,26 @@ figcaption {
 }
 
 .social-media-icon {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
 }
 
 .useful-link {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .useful-link:hover {
-    text-decoration: underline;
+    text-decoration: underline !important;
+}
+
+.contact-button {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-button input {
+    width: 50% !important;
+}
+
+.selector-chosen select {
+    border-top: 1px solid black !important;
 }

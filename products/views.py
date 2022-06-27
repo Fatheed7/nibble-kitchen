@@ -1,17 +1,10 @@
-from multiprocessing.sharedctypes import Value
-from platform import java_ver
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q, ExpressionWrapper,BooleanField
-from .models import Ingredients, Product, Category, Sub_Categories
+from django.db.models import Q
+from .models import Product, Category
 from .forms import ProductForm
 from django.db.models.functions import Lower
-from django.http import HttpResponse
-
-import json
-from collections import Counter
-
 
 # Create your views here.
 
@@ -89,24 +82,25 @@ def product_detail(request, product_id):
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
-        messages.error(request, "Sorry, you don't have the correct permissions to do that.")
+        messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('add_product'))
+            return redirect(reverse('product_detail', args=[product.id]))
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-    template = 'products/add_product.html'
+        
     context = {
         'form': form,
     }
 
-    return render(request, template, context)
+    return render(request, 'products/add_product.html', context)
 
 @login_required
 def edit_product(request, product_id):

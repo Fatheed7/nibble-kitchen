@@ -3,7 +3,7 @@ from .models import Returns, Postage, Privacy
 
 
 def ReturnsContent(request):
-    """ A view that renders the cart contents page """
+    """ A view that renders the returns and refunds page """
 
     returns = Returns.objects.all()
 
@@ -14,7 +14,7 @@ def ReturnsContent(request):
     return render(request, 'footer_content/returns.html', context)
 
 def PostageContent(request):
-    """ A view that renders the cart contents page """
+    """ A view that renders the postage and packaging page """
 
     postage = Postage.objects.all()
 
@@ -25,7 +25,7 @@ def PostageContent(request):
     return render(request, 'footer_content/postage.html', context)
 
 def PrivacyContent(request):
-    """ A view that renders the cart contents page """
+    """ A view that renders the privacy content page """
 
     privacy = Privacy.objects.all()
 

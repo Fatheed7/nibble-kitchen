@@ -1,4 +1,5 @@
-{% extends "base.html" %} {% load static %} {% block page_header %}
+{% extends "base.html" %} {% block extra_title %} - Celebration Cakes {%
+endblock %} {% load static %} {% block page_header %}
 <div class="container header-container">
   <div class="row">
     <div class="col"></div>
@@ -10,9 +11,15 @@
   <div class="jumbotron">
     <h1 class="text-center">Celebration Cakes</h1>
     <p class="text-center">
-      Celebration cakes are made to order and only available for collection,
-      contact us to discuss your booking.
+      Celebration cakes are made to order and only available for collection.
     </p>
+    <div class="my-5 contact-button">
+      <h4>
+        <a href="{% url 'contact' %}" class="shop-now-button btn rounded-pill"
+          >Contact us to discuss your booking.</a
+        >
+      </h4>
+    </div>
   </div>
 
   <div class="row gallery">
