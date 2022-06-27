@@ -27,6 +27,18 @@
   <div class="row">
     <div class="product-container col-10 offset-1">
       <div class="row mt-1 mb-2">
+        {% if products|length == 0 %}
+          <div class="jumbotron">
+            <h1 class="text-center">Oh dear!</h1>
+              <p class="text-center">
+                It seems there aren't any products in this category at the moment.
+              </p>
+            <div class="my-5 contact-button">
+        <a href="{% url 'products' %}" class="shop-now-button btn rounded-pill"
+          >Click here to return to all products.</a
+        >
+    </div>
+                    {% else %}
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
@@ -143,7 +155,7 @@
         <div class="col-12 d-none d-xl-block mb-3">
           <hr />
         </div>
-        {% endif %} {% endfor %}
+          {% endif %}{% endfor %}{% endif %}
       </div>
     </div>
   </div>
