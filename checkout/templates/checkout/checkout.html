@@ -5,6 +5,7 @@
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" />
+<link rel="stylesheet" href="{% static 'checkout/css/styles.css' %}" />
 {% endblock %} {% block page_header %}
 <div class="container header-container">
   <div class="row">
@@ -100,9 +101,27 @@
           {{ order_form.email | as_crispy_field }}
         </fieldset>
         <fieldset class="rounded px-3 mb-5">
-          <legend class="fieldset-label small text-black px-2 w-auto">
+          <legend class="fieldset-label small text-black px-2 w-auto delivery">
             Delivery
           </legend>
+          <p class="text-muted">
+            Please use the search box below, or type in your address manually.
+          </p>
+          <div id="app">
+            <div class="autocomplete-input-container mb-4">
+              <div class="autocomplete-input">
+                <input
+                  class="form-control"
+                  id="input"
+                  autocomplete="off"
+                  type="text"
+                  placeholder="Search for an Address..."
+                />
+              </div>
+              <div class="autocomplete-results-container">
+                <div class="autocomplete-results"></div>
+              </div>
+            </div>
           <!-- prettier-ignore -->
           {{ order_form.phone_number | as_crispy_field }}
           {{order_form.street_address1 | as_crispy_field }}
@@ -196,4 +215,5 @@
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
 <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+<script type="module" src="{% static 'checkout/js/index.mjs' %}"></script>
 {% endblock %}

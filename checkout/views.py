@@ -43,8 +43,6 @@ def checkout(request):
 
     response = requests.request("GET", url, headers=headers, data=payload)
 
-    print(response.text)
-
     if request.method == 'POST':
         cart = request.session.get('cart', {})
 
