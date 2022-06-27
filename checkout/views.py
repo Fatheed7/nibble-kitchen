@@ -10,6 +10,7 @@ from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from cart.contexts import cart_contents
 
+import requests
 import stripe
 import json
 
@@ -32,6 +33,17 @@ def cache_checkout_data(request):
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+
+    url = "https://api.woosmap.com/address/autocomplete/json?input=Lond&components=country%3Agb&key=woos-1bd4a9d1-f795-3334-930f-d5ec68a29651"
+
+    payload={}
+    headers = {
+        'Referer': 'http://localhost'
+    }
+
+    response = requests.request("GET", url, headers=headers, data=payload)
+
+    print(response.text)
 
     if request.method == 'POST':
         cart = request.session.get('cart', {})
