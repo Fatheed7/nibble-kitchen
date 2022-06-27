@@ -432,3 +432,11 @@ figcaption {
 .social-media-icon {
     font-size: 1.5rem;
 }
+
+.useful-link {
+    text-decoration: none;
+}
+
+.useful-link:hover {
+    text-decoration: underline;
+}
