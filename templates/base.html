@@ -263,6 +263,9 @@
             if ($(".search-box").val().length === 0 ) {
                 event.preventDefault();
                 $(".invalid-tooltip").show();
+                setTimeout(function() {
+                $('.invalid-tooltip').fadeOut('fast');
+                }, 5000);
             };
         })
     </script>
