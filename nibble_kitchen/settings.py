@@ -39,7 +39,7 @@ DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['nibble-kitchen.herokuapp.com', 'localhost', '127.0.0.1']
 
-
+SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 
 # Application definition
 
