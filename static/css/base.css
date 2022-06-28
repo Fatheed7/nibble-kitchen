@@ -350,48 +350,6 @@ figcaption {
     text-align: center;
 }
 
-
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 185px;
-    }
-}
-
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
-    }
-}
-
-@media (max-width: 1360px) {
-    .main-logo {
-        width: 15vw;
-    }
-}
-
-
 .display-4.logo-font.text-black {
     font-size: 2rem;
 }
@@ -477,10 +435,96 @@ figcaption {
     width: 50% !important;
 }
 
-.selector-chosen select {
+.chosen select {
     border-top: 1px solid black !important;
 }
 
 #id_country {
     display: none !important;
+}
+
+.selector {
+    width: 100% !important;
+}
+
+.selector-chosen select {
+    border-top: 1px solid !important
+}
+
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 185px;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
+
+@media (max-width: 1360px) {
+    .main-logo {
+        width: 15vw;
+    }
+}
+
+@media (max-width: 405px) {
+
+    #id_ingredients_from,
+    #id_ingredients_to {
+        width: 90vw !important;
+    }
+
+    .selector-available,
+    .selector-chosen {
+        width: auto !important
+    }
+
+    .selector ul.selector-chooser {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .selector-chooser {
+        transform: rotate(90deg) translateX(45vw) !important;
+    }
+
+    .selector .selector-available input {
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .help-tooltip,
+    .search-label-icon {
+        display: none !important;
+    }
+
+    li {
+        margin-top: 15px !important;
+    }
+
 }
