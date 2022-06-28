@@ -94,7 +94,6 @@ function bold_matched_substring(string, matched_substrings) {
 }
 
 function displayAddressDetails(addressDetails) {
-  console.log(addressDetails);
   if (addressDetails.formatted_address) {
     $("#id_street_address1").val(
       addressDetails.address_components[7].long_name +
@@ -126,17 +125,6 @@ function initUI() {
         results.innerHTML = "";
       }
     }, 0)
-  );
-
-  overlayCb.addEventListener(
-    "click",
-    (e) => {
-      if (componentExpanded) {
-        hideCountriesList();
-        displayAddress();
-      }
-    },
-    false
   );
 }
 

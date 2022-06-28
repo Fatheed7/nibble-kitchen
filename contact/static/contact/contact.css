@@ -1,6 +1,6 @@
-input[type=text],
-input[type=email],
-textarea {
+.contact-form input[type=text],
+.contact-form input[type=email],
+.contact-form textarea {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
