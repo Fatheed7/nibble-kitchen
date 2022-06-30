@@ -526,5 +526,15 @@ figcaption {
     li {
         margin-top: 15px !important;
     }
+}
 
+.image-container {
+    display: flex;
+    justify-content: end;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
