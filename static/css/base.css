@@ -394,7 +394,8 @@ figcaption {
     width: 100%;
 }
 
-.search-button {
+.search-button,
+.mobile-search-button {
     position: relative;
     left: -100%;
     z-index: 100 !important;
@@ -404,7 +405,8 @@ figcaption {
     text-align: center;
 }
 
-.invalid-tooltip {
+.invalid-tooltip,
+.mobile-toolip {
     text-align: center !important;
     width: 90% !important;
     border-radius: 2rem !important;

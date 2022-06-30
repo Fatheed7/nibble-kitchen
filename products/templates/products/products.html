@@ -30,9 +30,18 @@
         {% if products|length == 0 %}
           <div class="jumbotron">
             <h1 class="text-center">Oh dear!</h1>
+              {% if search_term %}
+              <p class="text-center">
+                We couldn't find any products using the search term <strong>"{{ search_term }}"</strong>.
+              </p>
+              <p class="text-center">
+                Please try a different search term, or click the button below.
+              </p>
+              {% else %}
               <p class="text-center">
                 It seems there aren't any products in this category at the moment.
               </p>
+              {% endif %}
             <div class="my-5 contact-button">
         <a href="{% url 'products' %}" class="shop-now-button btn rounded-pill"
           >Click here to return to all products.</a

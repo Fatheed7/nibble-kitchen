@@ -268,6 +268,16 @@
                 }, 5000);
             };
         })
+
+        $(".mobile-search-button").click(function(){ 
+            if ($(".mobile-search-box").val().length === 0 ) {
+                event.preventDefault();
+                $(".invalid-tooltip").show();
+                setTimeout(function() {
+                $('.invalid-tooltip').fadeOut('fast');
+                }, 5000);
+            };
+        })
     </script>
     {% endblock %}
 
