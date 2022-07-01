@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="stylesheet" href="{% static 'css/baguetteBox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -41,6 +42,7 @@
         type="text/javascript" async></script>
     <!-- Stripe -->
         <script src="https://js.stripe.com/v3/"></script>
+        <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
     {% endblock %}
 
     {% block extra_js %}
@@ -193,8 +195,10 @@
       <div class="row mt-3">
         <div class="col-md-4 col-lg-5 col-xl-6 mx-auto mb-4">
           <p class="text-uppercase text-center fw-bold mb-3">
+          <a href="{% url 'about' %}" class="text-reset useful-link">
             <i class="fa-solid fa-cake-candles me-3"></i>About Us
-          </p>
+            </a>
+            </p>
           <div class="text-center">
             <p>
             We are a small business based in Cramlington NE23, Northumberland.

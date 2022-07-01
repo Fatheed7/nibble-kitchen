@@ -29,4 +29,5 @@ urlpatterns = [
     path('celebrationcakes/', include('celebrationcakes.urls')),
     path('footer_content/', include('footer_content.urls')),
     path('contact/', include('contact.urls')),
+    path('ratings/', include('star_ratings.urls', namespace='ratings')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

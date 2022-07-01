@@ -165,8 +165,48 @@
       </div>
     </div>
   </div>
-  <!-- prettier-ignore -->
-  <div class="row">
+
+  <nav class="mb-5">
+    <div
+      class="nav nav-tabs justify-content-center"
+      id="nav-tab"
+      role="tablist"
+    >
+      <button
+        class="nav-link active mx-1"
+        id="nav-home-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#nav-home"
+        type="button"
+        role="tab"
+        aria-controls="nav-home"
+        aria-selected="true"
+      >
+        Ingredients
+      </button>
+      <button
+        class="nav-link mx-1"
+        id="nav-profile-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#nav-profile"
+        type="button"
+        role="tab"
+        aria-controls="nav-profile"
+        aria-selected="false"
+      >
+        Ratings & Reviews
+      </button>
+    </div>
+  </nav>
+  <div class="tab-content" id="nav-tabContent">
+    <div
+      class="tab-pane fade show active"
+      id="nav-home"
+      role="tabpanel"
+      aria-labelledby="nav-home-tab"
+    >
+      <!-- prettier-ignore -->
+      <div class="row">
       <div class="col-xl-6 col-12 col-md-12 col-lg-8 offset-lg-2 offset-xl-3">
         <div class="ingredient-container mb-2">
           <h2 class="logo-font text-center">Ingredients</h2>
@@ -196,23 +236,31 @@
       </div>
     </div>
 
-  <div class="row">
-    <div class="col-xl-6 col-12 col-md-12 col-lg-8 offset-lg-2 offset-xl-3">
-      <div class="wrapper mb-2">
-        <h3 class="logo-font text-center">Disclaimer</h3>
-        <hr />
-        <p>
-          We use the following allergens in our kitchen: Gluten, Eggs, Milk,
-          Nuts, Peanuts, Sulphur Dioxide, Soya Lecithin.
-        </p>
-        <p>
-          All of our products are baked in a single kitchen and at the same
-          time, so there may be cross contamination between products. If you
-          have a specific question regarding an allergen please feel free to
-          <a href="{% url 'contact' %}" class="text-reset">contact us</a>.
-        </p>
+      <div class="row">
+        <div class="col-xl-6 col-12 col-md-12 col-lg-8 offset-lg-2 offset-xl-3">
+          <div class="wrapper mb-2">
+            <h3 class="logo-font text-center">Disclaimer</h3>
+            <hr />
+            <p>
+              We use the following allergens in our kitchen: Gluten, Eggs, Milk,
+              Nuts, Peanuts, Sulphur Dioxide, Soya Lecithin.
+            </p>
+            <p>
+              All of our products are baked in a single kitchen and at the same
+              time, so there may be cross contamination between products. If you
+              have a specific question regarding an allergen please feel free to
+              <a href="{% url 'contact' %}" class="text-reset">contact us</a>.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+    <div
+      class="tab-pane fade"
+      id="nav-profile"
+      role="tabpanel"
+      aria-labelledby="nav-profile-tab"
+    ></div>
   </div>
   {% endblock %}
 </div>

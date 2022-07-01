@@ -22,3 +22,10 @@ class Privacy(models.Model):
     name = models.CharField(max_length = 255, null=True)
     content = QuillField()
 
+class About(models.Model):
+    class Meta:
+        verbose_name_plural = "About Us"
+        
+    name = models.CharField(max_length = 255, null=True)
+    content = QuillField()
+

@@ -68,7 +68,8 @@ INSTALLED_APPS = [
     'crispy_forms',
     'sortedm2m',
     'mathfilters',
-    'django_quill'
+    'django_quill',
+    'star_ratings',
 ]
 
 MIDDLEWARE = [

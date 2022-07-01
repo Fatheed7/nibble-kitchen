@@ -1,0 +1,23 @@
+<!-- prettier-ignore -->
+{% extends "base.html" %}
+{% block extra_title %}
+ - About Us
+ {%endblock %} {% load static %} {% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+<div class="overlay"></div>
+<h1 class="text-center mb-5"><u>About Us</u></h1>
+{% for c in about %}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-md-3 mb-3">
+      {{c.content.html|safe}} {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% endblock %}
