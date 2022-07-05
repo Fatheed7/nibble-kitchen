@@ -1,6 +1,12 @@
-{% extends "base.html" %} {% load static %} {% block page_header %}
-<!-- prettier-ignore -->
-{% load mathfilters %}
+<!-- prettier-ignore -->{% extends "base.html" %}
+{% block extra_title %} - {{product.name}} {%endblock %}
+ {% load static %}{% block extra_css %}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'contact/css/contact.css' %}"
+/>
+{% endblock %}{% block page_header %} {% load mathfilters %}
 <div class="container header-container">
   <div class="row">
     <div class="col"></div>
@@ -59,9 +65,9 @@
             <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
           </a>
         </p>
-        {% endif %} {% if product.rating %}
+        {% endif %} {% if avg %}
         <small class="text-muted"
-          ><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small
+          ><i class="fas fa-star mr-1"></i>{{ avg }} / 5</small
         >
         {% else %}
         <small class="text-muted">No Rating</small>
@@ -174,36 +180,48 @@
     >
       <button
         class="nav-link active mx-1"
-        id="nav-home-tab"
+        id="nav-ingredients-tab"
         data-bs-toggle="tab"
-        data-bs-target="#nav-home"
+        data-bs-target="#nav-ingredients"
         type="button"
         role="tab"
-        aria-controls="nav-home"
+        aria-controls="nav-ingredients"
         aria-selected="true"
       >
         Ingredients
       </button>
       <button
         class="nav-link mx-1"
-        id="nav-profile-tab"
+        id="nav-comments-tab"
         data-bs-toggle="tab"
-        data-bs-target="#nav-profile"
+        data-bs-target="#nav-comments"
         type="button"
         role="tab"
-        aria-controls="nav-profile"
+        aria-controls="nav-comments"
         aria-selected="false"
       >
-        Ratings & Reviews
+        Customer Reviews
+      </button>
+      <button
+        class="nav-link mx-1"
+        id="nav-review-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#nav-review"
+        type="button"
+        role="tab"
+        aria-controls="nav-review"
+        aria-selected="false"
+      >
+        Leave A Review
       </button>
     </div>
   </nav>
   <div class="tab-content" id="nav-tabContent">
     <div
       class="tab-pane fade show active"
-      id="nav-home"
+      id="nav-ingredients"
       role="tabpanel"
-      aria-labelledby="nav-home-tab"
+      aria-labelledby="nav-ingredients-tab"
     >
       <!-- prettier-ignore -->
       <div class="row">
@@ -257,15 +275,86 @@
     </div>
     <div
       class="tab-pane fade"
-      id="nav-profile"
+      id="nav-comments"
       role="tabpanel"
-      aria-labelledby="nav-profile-tab"
-    ></div>
+      aria-labelledby="nav-comments-tab"
+    >
+    <div class="d-flex justify-content-center">
+    {% if comments %}
+      <table class="mb-5">
+      {% for comment in comments %}
+       <tr>
+          <th><img src="{% static 'img/' %}{{comment.rating}}.png" class="rating-image"> {{comment.title}}</th>
+        </tr>
+      <tr>
+        <td><small>Comment by {{comment.author}} on {{comment.date_posted|date:"jS F Y"}}</td>
+      </tr>
+      <tr>
+        <td class="pb-2">{{comment.content}}</td>
+      </tr>
+      {% endfor %}
+      </table>
+    {% else %}
+    <div class="mb-5 text-center">
+    <p>There aren't any reviews for this product.</p>
+    <p>Be the first to <a href="#nav-review" id="review-link">leave a review!</a></p>
+    </div>
+    {% endif %}
+    </div>
+    </div>
+    <div
+      class="tab-pane fade"
+      id="nav-review"
+      role="tabpanel"
+      aria-labelledby="nav-review-tab"
+    >
+      <div class="d-flex justify-content-center">
+        {% if not request.user.is_authenticated %}
+        <div class="mb-5 text-center">
+          <p>You must be logged in to leave a review.</p>
+          <p>
+            <a href="{% url 'account_login' %}" class="text-reset">Login</a> or
+            <a href="{% url 'account_signup' %}" class="text-reset">Register</a>
+          </p>
+        </div>
+        {% else %}
+          <form class="contact-form" method="post">
+            {% csrf_token %} {{ form|crispy }}
+            <div class="contact-button mb-5">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
+        {% endif %}
+        </div>
+      </div>
+    </div>
   </div>
   {% endblock %}
 </div>
 {% block postloadjs %} {{ block.super }}
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("label:odd").addClass("half");
+    $(".form-check-label").mouseover(function () {
+      $(this).addClass("text-success");
+      $(this).parent().prevAll().children().addClass("text-success");
+    });
+    $(".form-check-label").mouseout(function () {
+      $(this).removeClass("text-success");
+      $(this).parent().prevAll().children().removeClass("text-success");
+    });
+    $(".form-check-label").click(function () {
+      $(this).addClass("text-warning");
+      $(this).parent().prevAll().children().addClass("text-warning");
+      $(this).parent().nextAll().children().removeClass("text-warning");
+    });
+  $('#review-link').on('click', function (e) {
+    e.preventDefault()
+    $('#nav-review-tab').trigger('click')
+  })
+  });
+</script>
 <!-- prettier-ignore -->
-{% include 'products/includes/quantity_input_script.html' %}
-{% include 'products/includes/size_update_script.html' %}
-{% endblock %}
+{% include 'products/includes/quantity_input_script.html' %} 
+{% include 'products/includes/size_update_script.html' %} {% endblock %}

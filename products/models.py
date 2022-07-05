@@ -1,4 +1,7 @@
 from django.db import models
+from django.utils import timezone
+from django.contrib.auth.models import User
+from django.db.models import Avg    
 from sortedm2m.fields import SortedManyToManyField
 
 class Category(models.Model):
@@ -60,7 +63,6 @@ class Product(models.Model):
     sale_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     medium_sale_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     large_sale_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     in_stock = models.BooleanField(default=False, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
@@ -68,3 +70,18 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+class Comments(models.Model):
+
+    class Meta:
+        verbose_name_plural = "Comments"
+
+    title = models.CharField(max_length=100)
+    rating = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)
+    content = models.TextField()
+    date_posted = models.DateTimeField(default=timezone.now)
+    author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    product = models.ForeignKey('Product', on_delete=models.CASCADE, null=True, blank=True)
+
+    def __str__(self):
+        return self.author.username + ', ' + self.title[:40]

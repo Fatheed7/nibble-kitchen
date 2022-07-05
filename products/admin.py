@@ -1,12 +1,12 @@
 from django.contrib import admin
-from .models import Category, Ingredients, Product, Sub_Categories 
+from .models import Category, Ingredients, Product, Sub_Categories, Comments
 from sortedm2m_filter_horizontal_widget.forms import SortedFilteredSelectMultiple
 
 
 # Register your models here.
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('sku', 'name', 'category', 'in_stock', 'price', 'on_sale', 'sale_price', 'rating', 'image_url')
+    list_display = ('sku', 'name', 'category', 'in_stock', 'price', 'on_sale', 'sale_price', 'image_url')
     search_fields = ('name',)
     ordering = ('sku',)
     list_filter = ('category',)
@@ -26,8 +26,12 @@ class IngredientsAdmin(admin.ModelAdmin):
     search_fields = ('name',)
     list_display = ('friendly_name','name','is_allergen','has_sub_ingredient')
 
+class CommentsAdmin(admin.ModelAdmin):
+    list_display = ('product','title','content','rating','date_posted','author')
+
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Sub_Categories, SubCategoriesAdmin)
 admin.site.register(Ingredients, IngredientsAdmin)
 admin.site.register(Product, ProductAdmin)
+admin.site.register(Comments, CommentsAdmin)
 

@@ -69,7 +69,6 @@ INSTALLED_APPS = [
     'sortedm2m',
     'mathfilters',
     'django_quill',
-    'star_ratings',
 ]
 
 MIDDLEWARE = [

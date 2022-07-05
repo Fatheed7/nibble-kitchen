@@ -1,9 +1,10 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
-from .models import Product, Category
-from .forms import ProductForm
+from django.db.models import Q, Sum, Count
+from .models import Product, Category, Comments
+from .forms import ProductForm, CommentForm
+from collections import Counter
 from django.db.models.functions import Lower
 
 # Create your views here.
@@ -19,7 +20,7 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-    sale = None
+    comments = Comments.objects.all()
 
     if request.GET:
         if 'sort' in request.GET:
@@ -57,24 +58,51 @@ def all_products(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    products = products.annotate(avg = Sum('comments__rating') / Count('comments__rating', distinct=True))
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'comments': comments,
     }
     
     return render(request, 'products/products.html', context)
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
+
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.product = Product.objects.get(id=product_id)
+            comment.author = request.user
+            comment.save()
+            return render(request, 'contact/success.html')
     
     product = get_object_or_404(Product, pk=product_id)
+    comments = Comments.objects.filter(product=product_id)
+    if comments.__len__() > 0:
+        avg = comments.aggregate(avg=Sum('rating') / Count('rating', distinct=True))
 
-    context = {
-        'product': product,
-        'ingredients': product.ingredients.all(),
-    }
+    form = CommentForm()
+    if comments.__len__() > 0:
+        context = {
+            'product': product,
+            'comments': comments,
+            'ingredients': product.ingredients.all(),
+            'form': form,
+            'avg': (round(avg['avg'],2)),
+        }
+    else:
+        context = {
+            'product': product,
+            'comments': comments,
+            'ingredients': product.ingredients.all(),
+            'form': form,
+        }
 
     return render(request, 'products/product_detail.html', context)
 
