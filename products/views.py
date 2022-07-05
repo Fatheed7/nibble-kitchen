@@ -92,7 +92,6 @@ def product_detail(request, product_id):
             if comment.author_id == request.user.id:
                 already_rated = True
                 break
-        print (already_rated)
 
     form = CommentForm()
     if comments.__len__() > 0:
@@ -176,3 +175,14 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+@login_required
+def delete_comment(request, comment_id):
+    """ Delete a product from the store """
+    comment = get_object_or_404(Comments, id=comment_id)
+    if not request.user.id == comment.author_id:
+        messages.error(request, "Sorry, you don't have the correct permissions to do that.")
+        return redirect(reverse('home'))
+    comment.delete()
+    messages.success(request, 'Comment deleted!')
+    return redirect(reverse('product_detail', args=[comment.product_id]))

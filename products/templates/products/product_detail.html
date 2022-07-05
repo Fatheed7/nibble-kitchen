@@ -286,9 +286,9 @@
     >
     <div class="d-flex justify-content-center">
     {% if comments %}
-      <table class="mb-5">
+      <table class="mb-5 review-table">
       {% for comment in comments %}
-       <tr>
+      <tr>
           <th><img src="{% static 'img/' %}{{comment.rating}}.png" class="rating-image"> {{comment.title}}</th>
         </tr>
       <tr>
@@ -297,6 +297,18 @@
       <tr>
         <td class="pb-2">{{comment.content}}</td>
       </tr>
+      {% if request.user.is_superuser or comment.author_id == request.user.id %}
+      <tr>
+        <td class="pb-2"><a class="text-danger" href="{% url 'delete_comment' comment.id %}"
+            ><small>Delete</small></td>
+      </tr>
+      {% endif %}
+      {% if forloop.last %}
+      {% else %}
+      <tr style="border-top: 1px solid #808080">
+        <td class="pb-2"></td>
+      </tr>
+      {% endif %}
       {% endfor %}
       </table>
     {% else %}

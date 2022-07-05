@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: calc(100vh - 185px);
     color: #555;
-    font-family: 'Montserrat';
+    font-family: 'Roboto';
 }
 
 /* from Bulma */
@@ -539,4 +539,10 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.review-table {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
 }
