@@ -323,12 +323,19 @@
           </p>
         </div>
         {% else %}
+          {% if already_rated %}
+        <div class="mb-5 text-center">
+          <p>You've already left a review for this product!</p>
+          <p>View the <a href="#nav-comments" id="comments-link">comments</a>.</p>
+        </div>
+          {% else %}
           <form class="contact-form" method="post">
             {% csrf_token %} {{ form|crispy }}
             <div class="contact-button mb-5">
               <input type="submit" value="Submit" />
             </div>
           </form>
+          {% endif %}
         {% endif %}
         </div>
       </div>
@@ -357,6 +364,10 @@
   $('#review-link').on('click', function (e) {
     e.preventDefault()
     $('#nav-review-tab').trigger('click')
+  })
+  $('#comments-link').on('click', function (e) {
+    e.preventDefault()
+    $('#nav-comments-tab').trigger('click')
   })
   });
 </script>

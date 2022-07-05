@@ -4,7 +4,6 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q, Sum, Count
 from .models import Product, Category, Comments
 from .forms import ProductForm, CommentForm
-from collections import Counter
 from django.db.models.functions import Lower
 
 # Create your views here.
@@ -73,6 +72,8 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual product details """
 
+    already_rated = False
+
     if request.method == 'POST':
         form = CommentForm(request.POST)
         if form.is_valid():
@@ -80,12 +81,18 @@ def product_detail(request, product_id):
             comment.product = Product.objects.get(id=product_id)
             comment.author = request.user
             comment.save()
-            return render(request, 'contact/success.html')
+            messages.success(request, 'Your comment has been added!')
+            return redirect(reverse('product_detail', args=[product_id]))
     
     product = get_object_or_404(Product, pk=product_id)
     comments = Comments.objects.filter(product=product_id)
     if comments.__len__() > 0:
         avg = comments.aggregate(avg=Sum('rating') / Count('rating', distinct=True))
+        for comment in comments:
+            if comment.author_id == request.user.id:
+                already_rated = True
+                break
+        print (already_rated)
 
     form = CommentForm()
     if comments.__len__() > 0:
@@ -95,6 +102,7 @@ def product_detail(request, product_id):
             'ingredients': product.ingredients.all(),
             'form': form,
             'avg': (round(avg['avg'],2)),
+            'already_rated': already_rated,
         }
     else:
         context = {
