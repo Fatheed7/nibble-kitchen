@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q, Sum, Count
+from django.db.models import F, Q, Sum, Count
 from .models import Product, Category, Comments
 from .forms import ProductForm, CommentForm
 from django.db.models.functions import Lower
@@ -21,6 +21,8 @@ def all_products(request):
     direction = None
     comments = Comments.objects.all()
 
+    products = products.annotate(avg = Sum('comments__rating') / Count('comments__rating', distinct=True))
+
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -30,18 +32,21 @@ def all_products(request):
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
+            if sortkey == 'comments':
+                sortkey = 'comments__rating'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
-                    sortkey = f'-{sortkey}'
-            products = products.order_by(sortkey)
+                    products = products.order_by(F(sortkey).desc(nulls_last=True))
+                else:
+                    products = products.order_by(sortkey)
+            
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)            
-
 
         if 'deals' in request.GET:
             products = products.filter(on_sale = True)
@@ -56,8 +61,6 @@ def all_products(request):
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-
-    products = products.annotate(avg = Sum('comments__rating') / Count('comments__rating', distinct=True))
 
     context = {
         'products': products,

@@ -57,8 +57,10 @@
                         <div class="sort-select-wrapper w-50">
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="sale_price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="sale_price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                                <option value="comments_asc" {% if current_sorting == 'comments_asc' %}selected{% endif %}>Rating (low to high)</option>
+                                <option value="comments_desc" {% if current_sorting == 'comments_desc' %}selected{% endif %}>Rating (high to low)</option>
                                 <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
                                 <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
                                 <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
@@ -194,16 +196,16 @@
             let sort
             let direction
 
-            let selectedVal = selector.val();
+            let selectedVal = ""
+            selectedVal = selector.val();
             if(selectedVal != "reset"){
-              if(selectedVal == "price_desc" || "price_asc"){
-                sort = "sale_price"
-                direction = selectedVal.split("_")[1];
+              if(selectedVal == "sale_price_desc" || selectedVal == "sale_price_asc"){
+                sort = selectedVal.split("_")[0] + "_" + selectedVal.split("_")[1];
+                direction = selectedVal.split("_")[2];
               } else {
                 sort = selectedVal.split("_")[0];
                 direction = selectedVal.split("_")[1];
               }
-
                 currentUrl.searchParams.set("sort", sort);
                 currentUrl.searchParams.set("direction", direction);
 
