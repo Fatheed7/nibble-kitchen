@@ -5,7 +5,7 @@ html {
 body {
     background: url('/media/deva-williamson-YpIKbBZtSWY-unsplash.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 185px);
+    height: calc(100vh - 220px);
     color: #555;
     font-family: 'Roboto';
 }
@@ -20,7 +20,6 @@ body {
 }
 
 .main-logo {
-    position: absolute;
     top: 5px;
     left: 5px;
     height: 10vh;
@@ -474,7 +473,7 @@ figcaption {
     }
 
     .header-container {
-        padding-top: 185px;
+        padding-top: 220px;
     }
 }
 
@@ -536,7 +535,7 @@ figcaption {
 }
 
 footer {
-    position: absolute;
+    position: revert;
     bottom: 0;
     width: 100%;
 }
