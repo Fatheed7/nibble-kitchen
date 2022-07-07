@@ -2,7 +2,7 @@ from django import forms
 from django.forms import ModelForm
 from django.contrib.admin.widgets import FilteredSelectMultiple
 from .widgets import CustomClearableFileInput
-from .models import Ingredients, Product, Category, Comments
+from .models import Ingredients, Product, Category, Rating
 
 class ProductForm(forms.ModelForm):
 
@@ -31,7 +31,7 @@ class ProductForm(forms.ModelForm):
 
 class CommentForm(ModelForm):
     class Meta:
-        model = Comments
+        model = Rating
         fields = ['rating','title', 'content' ]
 
     rating = forms.ChoiceField(choices=[

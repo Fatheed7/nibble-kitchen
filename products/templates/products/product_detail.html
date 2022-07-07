@@ -285,21 +285,21 @@
       aria-labelledby="nav-comments-tab"
     >
     <div class="d-flex justify-content-center">
-    {% if comments %}
+    {% if rating %}
       <table class="mb-5 review-table">
-      {% for comment in comments %}
+      {% for rate in rating %}
       <tr>
-          <th><img src="{% static 'img/' %}{{comment.rating}}.png" class="rating-image"> {{comment.title}}</th>
+          <th><img src="{% static 'img/' %}{{rate.rating}}.png" class="rating-image"> {{rate.title}}</th>
         </tr>
       <tr>
-        <td><small>Comment by {{comment.author}} on {{comment.date_posted|date:"jS F Y"}}</td>
+        <td><small>Comment by {{rate.author}} on {{rate.date_posted|date:"jS F Y"}}</td>
       </tr>
       <tr>
-        <td class="pb-2">{{comment.content}}</td>
+        <td class="pb-2">{{rate.content}}</td>
       </tr>
-      {% if request.user.is_superuser or comment.author_id == request.user.id %}
+      {% if request.user.is_superuser or rate.author_id == request.user.id %}
       <tr>
-        <td class="pb-2"><a class="text-danger" href="{% url 'delete_comment' comment.id %}"
+        <td class="pb-2"><a class="text-danger" href="{% url 'delete_comment' rate.id %}"
             ><small>Delete</small></td>
       </tr>
       {% endif %}

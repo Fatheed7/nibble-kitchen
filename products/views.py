@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import F, Q, Sum, Count
-from .models import Product, Category, Comments
+from .models import Product, Category, Rating
 from .forms import ProductForm, CommentForm
 from django.db.models.functions import Lower
 
@@ -19,9 +19,9 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-    comments = Comments.objects.all()
+    rating = Rating.objects.all()
 
-    products = products.annotate(avg = Sum('comments__rating') / Count('comments__rating', distinct=True))
+    products = products.annotate(avg = Sum('rating__rating') / Count('rating__rating', distinct=True))
 
     if request.GET:
         if 'sort' in request.GET:
@@ -32,8 +32,8 @@ def all_products(request):
                 products = products.annotate(lower_name=Lower('name'))
             if sortkey == 'category':
                 sortkey = 'category__name'
-            if sortkey == 'comments':
-                sortkey = 'comments__rating'
+            if sortkey == 'rating':
+                sortkey = 'rating__rating'
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -67,7 +67,7 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'comments': comments,
+        'rating': rating,
     }
     
     return render(request, 'products/products.html', context)
@@ -88,19 +88,19 @@ def product_detail(request, product_id):
             return redirect(reverse('product_detail', args=[product_id]))
     
     product = get_object_or_404(Product, pk=product_id)
-    comments = Comments.objects.filter(product=product_id)
-    if comments.__len__() > 0:
-        avg = comments.aggregate(avg=Sum('rating') / Count('rating', distinct=True))
-        for comment in comments:
-            if comment.author_id == request.user.id:
+    rating = Rating.objects.filter(product=product_id)
+    if rating.__len__() > 0:
+        avg = rating.aggregate(avg=Sum('rating') / Count('rating', distinct=True))
+        for rate in rating:
+            if rate.author_id == request.user.id:
                 already_rated = True
                 break
 
     form = CommentForm()
-    if comments.__len__() > 0:
+    if rating.__len__() > 0:
         context = {
             'product': product,
-            'comments': comments,
+            'rating': rating,
             'ingredients': product.ingredients.all(),
             'form': form,
             'avg': (round(avg['avg'],2)),
@@ -109,7 +109,7 @@ def product_detail(request, product_id):
     else:
         context = {
             'product': product,
-            'comments': comments,
+            'rating': rating,
             'ingredients': product.ingredients.all(),
             'form': form,
         }
@@ -182,10 +182,10 @@ def delete_product(request, product_id):
 @login_required
 def delete_comment(request, comment_id):
     """ Delete a product from the store """
-    comment = get_object_or_404(Comments, id=comment_id)
-    if not request.user.id == comment.author_id:
+    rating = get_object_or_404(Rating, id=comment_id)
+    if not request.user.id == rating.author_id:
         messages.error(request, "Sorry, you don't have the correct permissions to do that.")
         return redirect(reverse('home'))
-    comment.delete()
+    rating.delete()
     messages.success(request, 'Comment deleted!')
-    return redirect(reverse('product_detail', args=[comment.product_id]))
+    return redirect(reverse('product_detail', args=[rating.product_id]))
