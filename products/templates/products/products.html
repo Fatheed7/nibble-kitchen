@@ -14,7 +14,7 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col text-center mt-3">
-      <h2 class="logo-font">Products</h2>
+      <h1 class="logo-font">Products</h1>
       {% for c in current_categories %}
       <a
         class="category-badge text-decoration-none"
@@ -55,6 +55,7 @@
                     {% else %}
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
+                        <label for="sort-selector" class="text-muted me-2">Refine Search:</label>
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="sale_price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
@@ -66,6 +67,7 @@
                                 <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
                                 <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
                             </select>
+
                         </div>
                     </div>
                     <div class="col-12 col-md-6 order-md-first">

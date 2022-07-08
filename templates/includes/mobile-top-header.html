@@ -19,16 +19,20 @@
   >
     <form class="form" method="GET" action="{% url 'products' %}">
       <div class="input-group w-100">
-        <input
-          class="form-control rounded-pill border border-black rounded-0 mobile-search-box"
-          type="text"
-          name="q"
-          placeholder="Search our site"
-        />
+        <label
+          ><span class="sr-only">Search Our Site</span>
+          <input
+            class="form-control rounded-pill border border-black rounded-0 mobile-search-box"
+            type="text"
+            name="q"
+            placeholder="Search our site"
+          />
+        </label>
         <div class="input-group-append">
           <button
             class="form-control form-control rounded-pill btn btn-black border border-black rounded-0 mobile-search-button"
             type="submit"
+            aria-label="Search"
           >
             <span class="icon">
               <i class="fas fa-search"></i>

@@ -10,6 +10,7 @@
         <button
           class="decrement-qty btn btn-sm btn-black rounded-0 decrement_{{ item.item_id }}"
           data-item_id="{{ item.item_id }}"
+          aria-label="Decrement quantity"
         >
           <span>
             <i class="fas fa-minus fa-sm"></i>
@@ -25,11 +26,13 @@
         max="99"
         data-item_id="{{ item.item_id }}"
         id="id_qty_{{ item.item_id }}"
+        aria-label="Quantity"
       />
       <div class="input-group-append">
         <button
           class="increment-qty btn btn-sm btn-black rounded-0 increment_{{ item.item_id }}"
           data-item_id="{{ item.item_id }}"
+          aria-label="Increment quantity"
         >
           <span>
             <i class="fas fa-plus fa-sm"></i>
@@ -42,10 +45,13 @@
     </div>
   </div>
 </form>
-<a class="btn btn-dark update-link text-white"><small>Update</small></a>
+<a class="btn btn-dark update-link text-white" aria-label="Update item"
+  ><small>Update</small></a
+>
 <a
   class="btn btn-dark remove-item text-white float-right"
   id="remove_{{ item.item_id }}"
   data-product_size="{{ item.size }}"
+  aria-label="Remove item"
   ><small>Remove</small></a
 >

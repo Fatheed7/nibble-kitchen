@@ -545,3 +545,15 @@ footer {
     margin: 0 auto;
     text-align: center;
 }
+
+.cart-text {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.grand-total-text {
+    font-size: 1.5rem !important;
+}
