@@ -63,7 +63,7 @@ To test this functionality, please use the card details that can be [found here]
 
   - [Media](#media)
   - [Languages](#languages)
-  - [Libraries, Frameworks & Tools](#libraries,-frameworks-and-tools)
+  - [Libraries, Frameworks & Tools](#libraries-frameworks-and-tools)
 
 ## User Experience (UX)
 
@@ -110,6 +110,12 @@ To test this functionality, please use the card details that can be [found here]
   - As a user, I want to be able to easily connect to the business' social media pages to keep up to date.
   - As a user, I want to be able to easily contact the site owner if needed.
 
+#
+
+[Back to top ⇧](#nibble-kitchen)
+
+#
+
 ## Design
 
 - ### Colours
@@ -143,6 +149,12 @@ To test this functionality, please use the card details that can be [found here]
   ![Database Schema](readme_content/schema.png)
 
   The full image can be viewed [here](readme_content/schema.png)
+
+#
+
+[Back to top ⇧](#nibble-kitchen)
+
+#
 
 ## Features
 
@@ -189,6 +201,12 @@ To test this functionality, please use the card details that can be [found here]
     - If the user does not have any products in their cart, a message is shown stating 'Free delivery on orders over £65'
     - If the user does have items in their cart, the message is updated to notify the customer how much more they need to speed to ready the £65 free delivery limit.
 
+#
+
+[Back to top ⇧](#nibble-kitchen)
+
+#
+
 - ### Home Page
 
   ![Home Image](readme_content/home.png)
@@ -220,6 +238,12 @@ To test this functionality, please use the card details that can be [found here]
     ![Logout Image](readme_content/logout.png)
     #
 
+#
+
+[Back to top ⇧](#nibble-kitchen)
+
+#
+
 - ### Profile
 
   - Heading
@@ -239,9 +263,38 @@ To test this functionality, please use the card details that can be [found here]
     - Clicking on the hyperlink tag surrounding each order number will direct the user to a more detailed summary of the order.
       ![Order History Image](readme_content/order_history.png)
 
+#
+
+[Back to top ⇧](#nibble-kitchen)
+
+#
+
 - ### All Products
 
+  - Products Page
+
+    - The products page displays a list of available products in a selected category, search term or, if the correct option is selected, all products are shown.
+    - Each product card show an image of the product, the price (or price range), the category in which the product resides and the rating. If no ratings are available 'No Rating' is shown in its place.
+    - If a product is on sale, the original price will be shown with strikeout styling applied, the sale price will be shown and a small badge will be placed next to the prices to show the percentage of discount being given.
+      ![Products Card Image](readme_content/products.png)
+
+  - Sorting
+
+    - The sort-by box is located in the top right of the products section on screen sizes above 768px width, and in the centre below 768px width.
+    - Clicking on the box displays the sorting options available to the user.
+      ![Sort By Box Image](readme_content/sorting.png)
+
+#
+
+[Back to top ⇧](#nibble-kitchen)
+
+#
+
 - ### Product Details
+
+  - Product Info
+    - The product info section of the product details page shows all the important information related to each product.
+    - The name of the product is displayed at the top of this section and is also added to the
 
 - ### Product Management
 
@@ -259,21 +312,29 @@ To test this functionality, please use the card details that can be [found here]
 
 - ### Other
 
+#
+
+[Back to top ⇧](#nibble-kitchen)
+
+#
+
 ## Testing
 
 ## Deployment
 
-### Github
+- ### Github
 
-### Django
+- ### Django
 
-### Heroku
+- ### Heroku
 
-### AWS
+- ### AWS
 
-### Stripe
+- ### Stripe
 
 ## Credits
+
+- [Delboy](https://github.com/Delboy) for the "Back to Top" idea in the readme.
 
 - ### Media
 
