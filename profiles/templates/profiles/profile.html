@@ -15,7 +15,11 @@
   <div class="row">
     <div class="col">
       <hr />
+      {% if request.user %}
+      <h1 class="logo-font mb-4">{{ request.user.username }}'s Profile</h1>
+      {% else %}
       <h1 class="logo-font mb-4">My Profile</h1>
+      {% endif %}
       <hr />
     </div>
   </div>

@@ -191,9 +191,53 @@ To test this functionality, please use the card details that can be [found here]
 
 - ### Home Page
 
+  ![Home Image](readme_content/home.png)
+
+  - The home page has been designed with a minimalist appearance, containing only a hero image, a message, and a button directing the customer to view products on the site.
+  - The hero image can be seen in the [Media](#media) section of this readme.
+  - The message informs the user of the purpose of the site in a succinct manner, with the action of the button being made obvious by the label contained within.
+
 - ### Accounts
 
+  - Registration Page
+    - The registration page is used by users to create a new account for the site.
+    - Form validation is used to ensure all fields on the form are completed. If this validation fails, a message is shown to the user and the form is not submitted.
+    - Once form validation has passed, the form will be submitted and the user will receive a confirmation email to verify their account.
+    #
+    ![Registration Image](readme_content/register.png)
+    #
+  - Login Page
+    - The login page is used for users with an existing account to log in to the site.
+    - If the user has not verified their account by clicking on the link in the email they are sent, they will be unable to log in.
+    - A 'Forgot Password' link is present for users to recover their account in the event that they cannot remember the required information to log in.
+    #
+    ![Login Image](readme_content/login.png)
+    #
+  - Logout page
+    - The logout page is used by users to log out if they are signed in, removing their session information.
+    - The user will be taken to a confirmation page upon clicking the 'Logout' link, to ensure this is the action they wish to take.
+    #
+    ![Logout Image](readme_content/logout.png)
+    #
+
 - ### Profile
+
+  - Heading
+
+    - The heading of the profile page will display the user's username. In the event that this information cannot be obtained, 'My Profile' will be displayed instead.
+      ![Profile Heading Image](readme_content/profile.png)
+
+  - Delivery Information
+  - The delivery information section shows any stored address information for the user.
+  - The information can be updated on this page, and these change will be used to autocomplete the delivery address when placing an order.
+  - The information displayed in this section can also be updated when the user completes the shop journey if they check the 'Save this delivery information to my profile' box.
+    ![Delivery Information Image](readme_content/delivery.png)
+
+  - Order History
+    - The order history section displays all previous orders placed by the logged-in user.
+    - This section will display the order number, date of order, items ordered, quanitity ordered and the overall total.
+    - Clicking on the hyperlink tag surrounding each order number will direct the user to a more detailed summary of the order.
+      ![Order History Image](readme_content/order_history.png)
 
 - ### All Products
 
@@ -272,3 +316,4 @@ To test this functionality, please use the card details that can be [found here]
   - [Visual Studio Code](https://code.visualstudio.com/) - Application used for development of this site.
   - [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
   - [WAVE](https://wave.webaim.org/) - Used for Accessibility evaluation.
+  - [Woosmap](https://www.woosmap.com/) - Provided address searching API for checkout app.
