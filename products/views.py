@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import F, Q, Sum, Count
-from .models import Product, Category, Rating
+from .models import Ingredients, Product, Category, Rating
 from .forms import ProductForm, CommentForm
 from django.db.models.functions import Lower
 
@@ -22,6 +22,7 @@ def all_products(request):
     rating = Rating.objects.all()
 
     products = products.annotate(avg = Sum('rating__rating') / Count('rating__rating', distinct=True))
+    ingredients = Ingredients.objects.all()
 
     if request.GET:
         if 'sort' in request.GET:
@@ -57,7 +58,7 @@ def all_products(request):
                 messages.error(request, "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(description__icontains=query) | Q(ingredients__name__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'

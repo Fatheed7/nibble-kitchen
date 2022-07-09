@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'sortedm2m_filter_horizontal_widget',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -67,6 +66,7 @@ INSTALLED_APPS = [
     # Other
     'crispy_forms',
     'sortedm2m',
+    'sortedm2m_filter_horizontal_widget',
     'mathfilters',
     'django_quill',
 ]

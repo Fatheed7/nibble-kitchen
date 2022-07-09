@@ -10,7 +10,7 @@ The payment system used for the site is called Stripe. The system is set up in a
 
 To test this functionality, please use the card details that can be [found here](https://stripe.com/docs/payments/accept-card-payments?platform=web&ui=elements#web-test-integration).
 
-![Am I Responsive Image](assets/images/responsive.png)
+![Am I Responsive Image](readme_content/responsive.png)
 
 ## Contents
 
@@ -19,38 +19,13 @@ To test this functionality, please use the card details that can be [found here]
   - [User Stories](#user-stories)
 
     - [Navigation](#navigation)
-      - As a user, I want to navigate round the site easily to locate the products I want.
-      - As a user, I want to view a list of all available products.
-      - As a user, I want to be able to view more details on a product, such as price, ingredients and reviews.
-      - As a user, I want to be able to refine my search with categories.
-      - As a user, I want to be able to sort products by price, review or name.
-      - As a user, I want to be able to easily contact the site owner if needed.
-      - As a user, I want to be able to see all ingredients contained within the product, including any allergens.
     - [Accounts](#accounts)
-      - As a user, I want the option to register for an account, allowing me to save my details and see previous orders.
-      - As a user, I want to receive confirmation emails to confirm my registration.
-      - As a user, I want the ability to be able to log in and out, and be able to easily work out my current login status.
-      - As a user, I want to be able to recover my account information in the event that I forget it.
     - [Admin](#admin)
-      - As an admin, I want to be able to add products easily in a format consistent with the rest of the site.
-      - As an admin, I want to be able to edit products easily to ensure the customer is being shown the most up to date information
-      - As an admin, I want to be able to delete discontinued products, or mark seasonal products out of stock when not available.
-      - As an admin, I want to be able to easily manage the images in the gallery, and update the site policies.
-      - As an admin, I want to be able to add and update the ingredients for products, and mark any allergens appropriately.
     - [Purchasing](#purchasing)
-      - As a user, I want to be able to add items to my cart, allowing me to store things until I'm ready to complete my purchase.
-      - As a user, I want to be able to view my cart so I can see the current running total of my potential purchases.
-      - As a user, I want the ability to update the quantity of the items in my cart easily.
-      - As a user, I want an easily viewable total to allow me to monitor my overall spend.
-      - As a user, I want to be able to complete the purchasing journey, without the need to register if I do not wish to.
-      - As a user, I want to receive confirmation of my order so I know my order was placed successfully.
-      - As a user, I want to be able to view my order history so I can review past purchases.
     - [Interaction](#interaction)
-      - As a user, I want to be able to leave a review of products to share my experience with other customers
-      - As a user, I want to be able to easily connect to the business' social media pages to keep up to date.
-      - As a user, I want to be able to easily contact the site owner if needed.
 
   - [Design](#design)
+
     - [Colours](#colour)
     - [Fonts](#fonts)
     - [Images](#images)
@@ -70,8 +45,9 @@ To test this functionality, please use the card details that can be [found here]
   - [Checkout](#checkout)
   - [Celebration Cakes](#celebration-cakes)
   - [About Us](#about-us)
-  - [Contact](#contact)
+  - [Contact](#contact-us)
   - [Toasts and Pop-ups](#toasts-and-pop-ups)
+  - [Footer](#footer)
   - [Other](#other)
 
 - [Testing](#testing)
@@ -87,61 +63,157 @@ To test this functionality, please use the card details that can be [found here]
 
   - [Media](#media)
   - [Languages](#languages)
-  - [Libraries & Frameworks](#libraries-and-frameworks)
+  - [Libraries, Frameworks & Tools](#libraries,-frameworks-and-tools)
 
 ## User Experience (UX)
 
 ### User Stories
 
-#### Navigation
+- #### Navigation
 
-#### Accounts
+  - As a user, I want to navigate round the site easily to locate the products I want.
+  - As a user, I want to view a list of all available products.
+  - As a user, I want to be able to view more details on a product, such as price, ingredients and reviews.
+  - As a user, I want to be able to refine my search with categories.
+  - As a user, I want to be able to sort products by price, review or name.
+  - As a user, I want to be able to easily contact the site owner if needed.
+  - As a user, I want to be able to see all ingredients contained within the product, including any allergens.
 
-#### Admin
+- #### Accounts
 
-#### Purchasing
+  - As a user, I want the option to register for an account, allowing me to save my details and see previous orders.
+  - As a user, I want to receive confirmation emails to confirm my registration.
+  - As a user, I want the ability to be able to log in and out, and be able to easily work out my current login status.
+  - As a user, I want to be able to recover my account information in the event that I forget it.
 
-#### Interaction
+- #### Admin
+
+  - As an admin, I want to be able to add products easily in a format consistent with the rest of the site.
+  - As an admin, I want to be able to edit products easily to ensure the customer is being shown the most up to date information
+  - As an admin, I want to be able to delete discontinued products, or mark seasonal products out of stock when not available.
+  - As an admin, I want to be able to easily manage the images in the gallery, and update the site policies.
+  - As an admin, I want to be able to add and update the ingredients for products, and mark any allergens appropriately.
+
+- #### Purchasing
+
+  - As a user, I want to be able to add items to my cart, allowing me to store things until I'm ready to complete my purchase.
+  - As a user, I want to be able to view my cart so I can see the current running total of my potential purchases.
+  - As a user, I want the ability to update the quantity of the items in my cart easily.
+  - As a user, I want an easily viewable total to allow me to monitor my overall spend.
+  - As a user, I want to be able to complete the purchasing journey, without the need to register if I do not wish to.
+  - As a user, I want to receive confirmation of my order so I know my order was placed successfully.
+  - As a user, I want to be able to view my order history so I can review past purchases.
+
+- #### Interaction
+
+  - As a user, I want to be able to leave a review of products to share my experience with other customers
+  - As a user, I want to be able to easily connect to the business' social media pages to keep up to date.
+  - As a user, I want to be able to easily contact the site owner if needed.
 
 ## Design
 
-### Colours
+- ### Colours
 
-### Fonts
+  The decision was made to keep the colours as simple as possible for the website, with the main content being either black text on a white background, or vice versa.
 
-### Images
+  This is due to cakes and confectionary being inherently colourful. By reducing the colour palette to the most basic possible helps draw attention to the products displayed, and the colours within.
 
-### Wireframes
+  ![Colours Image](readme_content/colours.png)
 
-### Database Schema
+- ### Fonts
+
+  The [Roboto](https://fonts.google.com/specimen/Roboto) font from Google Fonts is used throughout the site on all content.
+
+  This font was chosen due to it's readability, popularity and familiarity, with it being the chosen font for a number of products produced by Google.
+
+- ### Images
+
+  All product images have been taken from the current website for [Nibble Kitchen](https://nibblekitchen.co.uk/), with permission from the owner.
+
+  Other images used throughout the site were chosen from the website [Unsplash](https://unsplash.com/) and were chosen to fit the overall theme of the website.
+
+  Image credits can be found in the [Media](#media) section of this Readme.
+
+- ### Wireframes
+
+- ### Database Schema
+
+  The database schema for the project was:
+
+  ![Database Schema](readme_content/schema.png)
+
+  The full image can be viewed [here](readme_content/schema.png)
 
 ## Features
 
-### Nav Bar
+- ### Nav Bar
 
-### Home Page
+  - Links
+    ![Navbar Image](readme_content/navbar.png)
 
-### Accounts
+    - To allow easy navigation around the site, the navbar is fixed to the top of each page and contains links to all areas of the website, with the exception of the information in the [footer](#footer).
+    - The navbar collapses to a hamburger menu once the window width drops below 992px to ensure all information is displayed comfortably to the user.
+    - All links, with the exception of About Us and Contact Us, make use of Bootstrap's dropdown plugin. Upon a link being clicked, more options are shown to the user.-
 
-### Profile
+  - Search Bar
 
-### All Products
+    ![Search Bar Image](readme_content/search.png)
 
-### Product Details
+    - The search bar is located in the middle of the navbar, above the links and can be used to search the site for products.
+    - The search term entered will be used to search the database for any products with matching information in either the product title, product description or product ingredients.
+    - On screens with a width below 992px, the search bar is hidden and can be displayed by clicking on the 'Search' button that is present in the navbar.
+    - JQuery is used to check the content of the search bar. If no search term has been entered, a warning is shown to the user for 5 seconds.
 
-### Product Management
+  - Account
 
-### Cart
+    ![Account Image](readme_content/account.png)
 
-### Checkout
+    - A user icon is located in the top right of the page, allowing the user access to manage their account and personal information.
+    - Clicking on the icon displays a dropdown menu using Bootstrap's dropdown plugin with a number of options
+      - Login & Register are displayed if the user is not logged in.
+      - My Profile & Logout are displayed if the user is logged in.
+      - Admin Dashboard & Add Product are displayed if the user is a superuser.
 
-### About Us
+  - Cart
 
-### Contact
+    ![Cart Image](readme_content/cart.png)
 
-### Toasts and Pop-ups
+    - A cart icon is also located in the top right corner of the page displaying the value of the current contents of the cart, and the number of items that are present in the cart.
+    - Clicking the cart icon will take the user to the [cart](#cart) page where they can complete their shopping journey.
 
-### Other
+  - Banner
+
+    ![Banner Image](readme_content/banner.png)
+
+    - A banner is displayed below the navbar advising the user on the current offer for free delivery.
+    - If the user does not have any products in their cart, a message is shown stating 'Free delivery on orders over £65'
+    - If the user does have items in their cart, the message is updated to notify the customer how much more they need to speed to ready the £65 free delivery limit.
+
+- ### Home Page
+
+- ### Accounts
+
+- ### Profile
+
+- ### All Products
+
+- ### Product Details
+
+- ### Product Management
+
+- ### Cart
+
+- ### Checkout
+
+- ### About Us
+
+- ### Contact Us
+
+- ### Toasts and Pop-ups
+
+- ### Footer
+
+- ### Other
 
 ## Testing
 
@@ -159,8 +231,44 @@ To test this functionality, please use the card details that can be [found here]
 
 ## Credits
 
-### Media
+- ### Media
 
-### Languages
+  - All product images have been taken from the current website for [Nibble Kitchen](https://nibblekitchen.co.uk/), with permission from the owner.
 
-## Libraries and Frameworks
+  - The [main background image used on the 'Home' page](https://unsplash.com/photos/YpIKbBZtSWY) was made available via [Unsplash](https://unsplash.com/) by the user [American Heritage Chocolate](https://unsplash.com/@americanheritagechocolate) and is used under the Unsplash License.
+
+  - The [image used on the 'About Us' page](https://unsplash.com/photos/5K5Nc3AGF1w) was made available via [Unsplash](https://unsplash.com/) by the user [Deva Williamson](https://unsplash.com/@biglaughkitchen) and is used under the Unsplash License.
+
+- ### Languages
+
+  - [Bootstrap](https://getbootstrap.com/)
+  - [CSS](https://en.wikipedia.org/wiki/CSS)
+  - [Django](https://www.djangoproject.com/)
+  - [HTML5](https://en.wikipedia.org/wiki/HTML5)
+  - [Javascript](https://en.wikipedia.org/wiki/JavaScript)
+  - [JQuery](https://en.wikipedia.org/wiki/JQuery)
+  - [Python](<https://en.wikipedia.org/wiki/Python_(programming_language)>)
+
+- ### Libraries, Frameworks and Tools
+
+  - [AllAuth](https://www.intenct.nl/projects/django-allauth/) - Django app used for local authentication.
+  - [Am I Responsive](http://ami.responsivedesign.is/) - Used to verify responsiveness of website on different devices.
+  - [Balsamiq](https://balsamiq.com/) - Used to generate Wireframe images.
+  - [Browser Stack](https://www.browserstack.com/) - Used for Cross Site Browser Testing.
+  - [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) - Used for overall development and tweaking, including testing responsiveness and performance.
+  - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Django app to allow control over rendering behaviour of django forms.
+  - [Django Quill Editor](https://github.com/LeeHanYeong/django-quill-editor) - WYSIWYG editor added for easy updating of text only content on the site.
+  - [Favicon.io](https://favicon.io) - Used to generate Favicon image.
+  - [Font Awesome](https://fontawesome.com/) - Used for icons on multiple pages.
+  - [GitHub](https://github.com/) - Used for version control.
+  - [Gunicorn](https://gunicorn.org/) - Python WSGI HTTP Server
+  - [Heroku](https://heroku.com) - Used for deployment and hosting of the project.
+  - [JQuery](https://en.wikipedia.org/wiki/JQuery) - Used to simplify definition of DOM elements, but used minimally with a preference for vanilla Javascript.
+  - [JSHint](https://jshint.com/about/) - Linter used to flag errors, bugs and warnings.
+  - [Pillow](https://pypi.org/project/Pillow/) - Python Imaging Library to add image processing capabilities to the project.
+  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Used for consistent code formatting.
+  - [Slack](https://slack.com/) - Used for support and advice from the Code Insitute Community.
+  - [Sorted M2M Filter Horizontal Widget](https://pypi.org/project/django-sortedm2m-filter-horizontal-widget/) - Django admin widget to allow horizontal sorting of products and ingredients.
+  - [Visual Studio Code](https://code.visualstudio.com/) - Application used for development of this site.
+  - [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
+  - [WAVE](https://wave.webaim.org/) - Used for Accessibility evaluation.
