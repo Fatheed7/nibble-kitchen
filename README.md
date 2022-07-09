@@ -249,6 +249,7 @@ To test this functionality, please use the card details that can be [found here]
   - Heading
 
     - The heading of the profile page will display the user's username. In the event that this information cannot be obtained, 'My Profile' will be displayed instead.
+
       ![Profile Heading Image](readme_content/profile.png)
 
   - Delivery Information
