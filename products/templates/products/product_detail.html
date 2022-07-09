@@ -11,6 +11,11 @@
   type="text/css"
   href="{% static 'products/css/products.css' %}"
 />
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{% static 'products/css/rating.css' %}"
+/>
 {% endblock %}{% block page_header %} {% load mathfilters %}
 <div class="container header-container">
   <div class="row">
@@ -266,8 +271,9 @@
             <hr />
             <p>
               We use the following allergens in our kitchen: Gluten, Eggs, Milk,
-              Nuts, Peanuts, Sulphur Dioxide, Soya Lecithin.
+              Nuts, Peanuts, Sulphur Dioxide and Soya Lecithin.
             </p>
+            <p>Allergens are shown in bold in the ingredients section above.</p>
             <p>
               All of our products are baked in a single kitchen and at the same
               time, so there may be cross contamination between products. If you
@@ -343,8 +349,8 @@
           {% else %}
           <form class="contact-form" method="post">
             {% csrf_token %} {{ form|crispy }}
-            <div class="contact-button mb-5">
-              <input type="submit" value="Submit" />
+            <div class="contact-button mb-5 ">
+              <input class="btn btn-black rounded-0 text-uppercase float-right" type="submit" value="Submit" />
             </div>
           </form>
           {% endif %}
@@ -359,7 +365,7 @@
 
 <script type="text/javascript">
   $(document).ready(function () {
-    $("label:odd").addClass("half");
+    $("label:even").addClass("half");
     $(".form-check-label").mouseover(function () {
       $(this).addClass("text-success");
       $(this).parent().prevAll().children().addClass("text-success");

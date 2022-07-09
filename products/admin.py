@@ -26,6 +26,11 @@ class IngredientsAdmin(admin.ModelAdmin):
     search_fields = ('name',)
     list_display = ('friendly_name','name','is_allergen','has_sub_ingredient')
 
+    def formfield_for_manytomany(self, db_field, request=None, **kwargs):
+        if db_field.name == 'sub_ingredients':
+            kwargs['widget'] = SortedFilteredSelectMultiple()
+        return super(IngredientsAdmin, self).formfield_for_manytomany(db_field, request, **kwargs)
+
 class RatingAdmin(admin.ModelAdmin):
     list_display = ('product','title','content','rating','date_posted','author')
 

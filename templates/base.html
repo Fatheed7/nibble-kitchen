@@ -256,10 +256,14 @@
     {% block postloadjs %}
     <script type="text/javascript">
     $(document).ready(function() {
-        $(".toast").toast("show");
+        $(".toast").toggleClass("toast-animation");
+        setTimeout(function() {
+            $(".toast").removeClass("toast-animation");
+        }, 5000);
     });
-    </script>
-    <script>
+    $(".btn-close").click(function() {
+        $(".toast").toggleClass("toast-animation");
+    });
         window.addEventListener('load', function() {
         baguetteBox.run('.gallery', {
             captions: function(element) {
