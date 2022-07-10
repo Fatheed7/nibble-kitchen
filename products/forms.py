@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 from django.contrib.admin.widgets import FilteredSelectMultiple
+from django.utils.safestring import mark_safe
 from .widgets import CustomClearableFileInput
 from .models import Ingredients, Product, Category, Rating
 
@@ -35,8 +36,17 @@ class CommentForm(ModelForm):
         fields = ['rating','title', 'content' ]
 
     rating = forms.ChoiceField(choices=[
-        (0.5, ''), (1, ''), (1.5, ''), (2, ''), (2.5, ''), (3, ''), (3.5, ''), (4, ''), (4.5, ''), (5, '')],
-        widget=forms.RadioSelect,)
+        (0.5, mark_safe('<span class="visually-hidden">Rating 0.5</span>')),
+        (1, mark_safe('<span class="visually-hidden">Rating 1.0</span>')),
+        (1.5, mark_safe('<span class="visually-hidden">Rating 1.5</span>')),
+        (2, mark_safe('<span class="visually-hidden">Rating 2.0</span>')),
+        (2.5, mark_safe('<span class="visually-hidden">Rating 2.5</span>')),
+        (3, mark_safe('<span class="visually-hidden">Rating 3.0</span>')),
+        (3.5, mark_safe('<span class="visually-hidden">Rating 3.5</span>')),
+        (4, mark_safe('<span class="visually-hidden">Rating 4.0</span>')),
+        (4.5, mark_safe('<span class="visually-hidden">Rating 4.5</span>')),
+        (5, mark_safe('<span class="visually-hidden">Rating 5.0</span>'))],
+        widget=forms.RadioSelect(),)
 
     def __init__(self, *args, **kwargs):
         """

@@ -52,3 +52,12 @@
     height: 1em;
     vertical-align: text-top;
 }
+
+.rating-form input[type=text],
+.rating-form input[type=email],
+.rating-form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+}

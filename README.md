@@ -284,6 +284,7 @@ To test this functionality, please use the card details that can be [found here]
     - The sort-by box is located in the top right of the products section on screen sizes above 768px width, and in the centre below 768px width.
     - Clicking on the box displays the sorting options available to the user.
       ![Sort By Box Image](readme_content/sorting.png)
+    - Within `views.py`, an if statement is present to check if the sortkey contains `desc`. If `desc` is present, `nulls_last=True` is appended to the end of the search term to ensure products with ratings are shown before products with no ratings.
 
 #
 
@@ -295,7 +296,13 @@ To test this functionality, please use the card details that can be [found here]
 
   - Product Info
     - The product info section of the product details page shows all the important information related to each product.
-    - The name of the product is displayed at the top of this section and is also added to the
+    - The name of the product is displayed at the top of this section and is also added to the title of the page.
+    - Below this, the price of the product is shown.
+      - If the product is on sale, the original price will be shown with strikeout styling applied, the sale price will be shown and a small badge will be placed next to the prices to show the percentage of discount being given.
+      - If the product has sizes, the prices are updated appropriately using JQuery. The values for these prices are obtained from a seperate file which, in turn, queries the database for the correct prices. This ensures the same code can be reused throughout the site.
+    - The category for the current product is shown next, with an underline style applied to indicate a hyperlink. Clicking on this link will direct the user to the products page for that category.
+    - The Rating for the product is shown next. The rating is calculated by dividing the sum of all reviews by the number of reviews. If there are no reviews for a product, 'No Rating' is shown instead.
+    - `Edit` and `Delete` buttons are shown next to the rating if the current user has superuser privileges, allowing the requested action to take place.
 
 - ### Product Management
 

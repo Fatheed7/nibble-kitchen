@@ -445,7 +445,8 @@ figcaption {
     text-decoration: underline !important;
 }
 
-.contact-button {
+.contact-button,
+.rating-button {
     display: flex;
     justify-content: center;
 }
