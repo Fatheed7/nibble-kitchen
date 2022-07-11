@@ -33,6 +33,8 @@ class IngredientsAdmin(admin.ModelAdmin):
 
 class RatingAdmin(admin.ModelAdmin):
     list_display = ('product','title','content','rating','date_posted','author')
+    readonly_fields = ('product','title','content','rating','date_posted','author')
+    fields = ('product','title','rating','content','date_posted','author')
 
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Sub_Categories, SubCategoriesAdmin)

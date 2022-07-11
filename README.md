@@ -294,8 +294,12 @@ To test this functionality, please use the card details that can be [found here]
 
 - ### Product Details
 
+  ![Products Info Image](readme_content/product_info.png)
+
   - Product Info
+
     - The product info section of the product details page shows all the important information related to each product.
+    - The left part of the product info section is taken up by an image of the product. The image can be enlarged upon clicking to enable a better view. This is done within the page using bootstrap, rather than opening a new tab.
     - The name of the product is displayed at the top of this section and is also added to the title of the page.
     - Below this, the price of the product is shown.
       - If the product is on sale, the original price will be shown with strikeout styling applied, the sale price will be shown and a small badge will be placed next to the prices to show the percentage of discount being given.
@@ -303,10 +307,85 @@ To test this functionality, please use the card details that can be [found here]
     - The category for the current product is shown next, with an underline style applied to indicate a hyperlink. Clicking on this link will direct the user to the products page for that category.
     - The Rating for the product is shown next. The rating is calculated by dividing the sum of all reviews by the number of reviews. If there are no reviews for a product, 'No Rating' is shown instead.
     - `Edit` and `Delete` buttons are shown next to the rating if the current user has superuser privileges, allowing the requested action to take place.
+    - If the product has different sizes available, the `Size` field will be shown allowing the user to pick between Small, Medium, or Large. This is mainly applicable for the cake jars.
+    - The `Quantity` field is shown for all products and allows the user to increment or decrement the value either with the provided buttons, or by typing directly into the box. Javascript is used to check if the value is above 99, which will return the max value to 99 if true.
+    - A pair of buttons with the text of `< Keep Shopping` and `Add to Cart` are displayed as the element of the product info section, respectively. The `< Keep Shopping` button will return the user to the main products page, with the `Add To Cart` button adding the item into the user's cart before returning them to the same page.
+
+    #
+
+    ![Ingredients Image](readme_content/ingredients.png)
+
+  - Ingredients
+
+    - The Ingredients section is the first tab within the bottom section of the Product Details page. It begins with information advising that all allergens are marked in bold.
+    - The ingredients are stored in the database for each product and are retrieved to be displayed on the page. This was done to ensure that any updates to allergens in the future take effect site wide and to ensure customers with allergens have the best information possible.
+    - Below the ingredients section is a disclaimer, providing a list of allergens used and warning that items are baked in a single kitchen and that cross contamination between allergens is possible.
+
+    #
+
+    ![Customer Reviews Image](readme_content/customer_reviews.png)
+
+  - Customer Reviews
+
+    - The Customer Reviews section displays any reviews that have been left by customers previously. If no reviews have been left, the user is instead shown a message stating: `There aren't any reviews for this product. Be the first to leave a review!`, with a link being provided to the `Leave A Review` tab.
+    - If reviews are present in the database, the rating is obtained and the relevant rating image is displayed alongside the title of the review. Below this is the username and date on which the comment was made, followed by the comment itself.
+    - Superusers and the original user who posted the comment have the ability to delete the comment if required. No user has the ability to edit user reviews to ensure the reviews section is perceived as trustworthy.
+
+    #
+
+    ![Leave A Review Image](readme_content/review.png)
+
+  - Leave A Review
+
+    - The final section on the Product Details is for the user to leave a rating and review of the product.
+    - The first part of the form allows the user to leave a rating between 0.5 and 5.0 stars. The rating already selected by the user is highlighted in `Yellow`, with a `Green` highlight being applied to any stars upto where the user is current highlighting with the mouse.
+    - The `Title` and `Content` sections of the form allow the user to provided a title and the content of their review respectively.
+    - Following the form being validated successfully, the form is submitted and the rating, title and content are submitted to the database. Along with this information, the product ID, date, time and user ID is also stored.
+    - If a user has already left a review, they will instead be shown a message stating `You've already left a review for this product!`
 
 - ### Product Management
 
+  - Whether `Adding` or `Editing` a product the user is shown the same form, however the `Edit Product` page will already be populated with data.
+  - Due to the similarities of the form, I will first discuss the form itself before going into the different between the two pages.
+  - Both pages `REQUIRE` the following information:
+    - Category
+    - Name
+    - Description
+    - If the product `Has Sizes`
+    - Price (This is used as the Small price for products with sizes, or standard price for other products)
+    - Sale Price (This is used in the search function for the purpose of ensuring prices are sorted correctly)
+    - Ingredients (The [Sorted M2M Filter Horizontal Widget](https://pypi.org/project/django-sortedm2m-filter-horizontal-widget/) was used to enable vertical sorting of products, replacing the standard `Hold Ctrl and Click` select menu.)
+  - All other fields on the page are optional.
+  - The only other difference between the pages, other than the ones already mentioned, is the additional modifying of the title when editing a product.
+
 - ### Cart
+
+  - The cart is split into two main elements
+    - Products Section
+    - Total Section
+
+  #
+
+  ![Cart - Products Image](readme_content/cart_product.png)
+
+  - Products Section
+    - The products section is also split down further into 5 sections:
+      - The `Product` section displays an image for each of the products contained within the cart.
+      - The `Product Info` section displays the name of the product chosen. If the product has a size value, if will be displayed on the following line, otherwise this value will not appear. Finally the SKU of the product will be displayed.
+      - The `Price` section displays the unit price for the item, and size if applicable, chosen.
+      - The `Quantity` section displays the current quantity of the product chosen, with controls provided to allow the user to update the quantity if they wish to.
+      - The final section is the `Subtotal` section which multiplies the value from the `Price` field with the value of the `Quantity` field to calculate the total being paid for this item.
+
+  #
+
+  ![Cart - Total Image](readme_content/cart_total.png)
+
+  - Total Section
+    - The `Cart Total` field calculates the sum of all `Subtotal` values within the cart to determine the overall total value of products.
+    - The `Delivery` field displays the value of the `Cart Total` field multiplied by the `STANDARD_DELIVERY_PERCENTAGE` value from `settings.py`. This is currently set to 10%.
+    - The `Grand Total` field shows the sum of the `Cart Total` and `Delivery` fields.
+    - Below the `Grand Total` field is a notice to the customer informing them of the required further spend for them to receive free delivery of their products. This value is calculated by subtracting the `Cart Total` value from the `FREE_DELIVERY_THRESHOLD` value set in `settings.py`. The delivery cost is not included in this calculation.
+    - The final part of the `Total Section` are the `Keep Shopping` and `Secure Checkout` buttons. Like the `Product Detail` page, the `< Keep Shopping` button will return the user to the main products page, leaving the current products in the cart as they are. The `Secure Checkout` button will navigate the user to the `Checkout` page which is described in more detail in the next section.
 
 - ### Checkout
 

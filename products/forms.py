@@ -13,6 +13,9 @@ class ProductForm(forms.ModelForm):
 
     image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
     ingredients = forms.ModelMultipleChoiceField(queryset=Ingredients.objects.all(), widget=FilteredSelectMultiple("Ingredients", False))
+    sale_price = forms.DecimalField(max_digits=6, decimal_places=2, required=True)
+    has_sizes = forms.BooleanField(label='Has Sizes', required=True)
+    in_stock = forms.BooleanField(label='In Stock', required=True)
 
     class Media:
         js = ('/admin/jsi18n/',)
