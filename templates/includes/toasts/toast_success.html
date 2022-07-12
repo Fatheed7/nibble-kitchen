@@ -1,10 +1,16 @@
-<div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
-  <div class="w-100 toast-capper bg-success"></div>
-  <div class="toast-header bg-white text-dark">
-    <strong class="mr-auto">Success!</strong>
+<div
+  role="alert"
+  aria-live="assertive"
+  aria-atomic="true"
+  class="toast"
+  data-bs-autohide="false"
+>
+  <div class="toast-header text-white toast-head-bg">
+    <i class="fa-solid fa-circle-check text-light me-2"></i
+    ><span class="me-auto">Success!</span>
     <button
       type="button"
-      class="btn-close btn-close-black me-2 m-auto"
+      class="btn-close btn-close-white"
       data-bs-dismiss="toast"
       aria-label="Close"
     ></button>
@@ -41,10 +47,9 @@
         <div class="col-9">
           <p class="my-0"><strong>{{ item.product.name }}</strong></p>
           <p class="my-0 small">
-            Size:
             <!-- prettier-ignore -->
-            {% if item.product.has_sizes %}{{ item.size|upper }}
-            {% else%}N/A{% endif %}
+            {% if item.product.has_sizes %}Size: {{ item.size|upper }}
+            {% else%}{% endif %}
           </p>
           <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
         </div>

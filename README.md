@@ -46,7 +46,7 @@ To test this functionality, please use the card details that can be [found here]
   - [Celebration Cakes](#celebration-cakes)
   - [About Us](#about-us)
   - [Contact](#contact-us)
-  - [Toasts and Pop-ups](#toasts-and-pop-ups)
+  - [Toasts](#toasts)
   - [Footer](#footer)
   - [Other](#other)
 
@@ -450,13 +450,55 @@ To test this functionality, please use the card details that can be [found here]
 
 - ### About Us
 
+  - The [image used on the 'About Us' page](https://unsplash.com/photos/5K5Nc3AGF1w) was made available via [Unsplash](https://unsplash.com/) by the user [American Heritage Chocolate](https://unsplash.com/@americanheritagechocolate) and is used under the Unsplash License.
+  - The page gives a brief history of the business and the content is set using [Django Quill Editor](https://github.com/LeeHanYeong/django-quill-editor). This allows easier editing for the business owner without needing to have any knowledge of HTML or CSS.
+  - The About Us page ends with a reminder to contact the business with any questions or queries, hopefully increasing engagement and leading to more business.
+
 - ### Contact Us
 
-- ### Toasts and Pop-ups
+  - The `Contact Us` page is linked to from various other places on the website and allows users to contact the business with any query they may have.
+  - The form was purposefully left as basic as possible to give maximum flexibility to the user. The form consists of 3 text fields (Email, Subject and Message.)
+  - Once all sections have been completed and the `Submit` button has been clicked, the information is stored in the database and the user is directed to the `Contact Success` page.
+  - The `Contact Success` page contains a message stating `Thank for getting in touch with us. We've got your message, and we'll be in touch as soon as possible.`, with a button returning the user to the main products page.
+  - The messages sent by users can be viewed from the admin panel, where the option is available to mark a message as actioned, allowing other people who may use the admin panel to see which messages have/have not been responded to.
+
+    ![Contact Us Image](readme_content/contact_us.png)
+
+- ### Toasts
+
+  - Toasts appear in the top-right corner on the screen when any information needs to be relayed to the user. The toasts appear using a CSS animation which alters the location of the toast.
+  - The toasts display messages under the categories of `Success`, `Alert`, `Warning` and `Error`.
+  - The toasts have slightly different designs depending on the type of toast used.
+
+    - The `Alert`, `Warning` and `Error` toasts all share the same design of a dark header and dark body with only the colour of the icon on the alert change.
+    - The `Success` toast instead has a dark header and light body. This is due to the amount of information displayed on the `Success` toast when items are added to the basic and aids readability for the user.
+
+    ![Toasts Image](readme_content/toasts.png)
 
 - ### Footer
 
+  - The footer is displayed on all pages other than the main landing page of the website, and sits at the bottom of each page.
+  - The top part of the footer is a full width div containing links to the Social Media pages for the business.
+  - The lower section of the footer is split into three columns with the first having a short `About Us` synopsis. The title of the column also links to the `About Us` page, but is not underlined due to the link also being available in the navbar.
+  - The middle column contains `Useful Links` which direct to individual pages for the Refunds & Returns Policy, Postage & Packaging Policy and Privacy Policy. Like the `About Us` page, all content on these pages is set using [Django Quill Editor](https://github.com/LeeHanYeong/django-quill-editor). This allows easier editing for the business owner without needing to have any knowledge of HTML or CSS.
+  - The third and final column contains contact information for the business, with a `mailto:` link being used to highlight the email address.
+  - Icons provided by [Font Awesome](https://fontawesome.com/) throughout the footer.
+
+    ![Footer Image](readme_content/footer.png)
+
 - ### Other
+
+  - Error 404 Page
+
+    If the user navigates to a page that does not exist, the 404.html page will render. This page has the same basic layout as the home page of the site, but displays different text content. The button, however, still returns the user to the main products page.
+
+    ![404 Image](readme_content/404.png)
+
+  - Error 500 Page
+
+    If the user navigates to a page that causes a response the server does not know how to handle, the 500.html page will render. This page has the same basic layout as the home page of the site, but displays different text content. The button, however, still returns the user to the main products page.
+
+    ![404 Image](readme_content/500.png)
 
 #
 
@@ -486,9 +528,9 @@ To test this functionality, please use the card details that can be [found here]
 
   - All product images have been taken from the current website for [Nibble Kitchen](https://nibblekitchen.co.uk/), with permission from the owner.
 
-  - The [main background image used on the 'Home' page](https://unsplash.com/photos/YpIKbBZtSWY) was made available via [Unsplash](https://unsplash.com/) by the user [American Heritage Chocolate](https://unsplash.com/@americanheritagechocolate) and is used under the Unsplash License.
+  - The [main background image used on the 'Home' page](https://unsplash.com/photos/YpIKbBZtSWY) was made available via [Unsplash](https://unsplash.com/) by the user [Deva Williamson](https://unsplash.com/@biglaughkitchen) and is used under the Unsplash License.
 
-  - The [image used on the 'About Us' page](https://unsplash.com/photos/5K5Nc3AGF1w) was made available via [Unsplash](https://unsplash.com/) by the user [Deva Williamson](https://unsplash.com/@biglaughkitchen) and is used under the Unsplash License.
+  - The [image used on the 'About Us' page](https://unsplash.com/photos/5K5Nc3AGF1w) was made available via [Unsplash](https://unsplash.com/) by the user [American Heritage Chocolate](https://unsplash.com/@americanheritagechocolate) and is used under the Unsplash License.
 
 - ### Languages
 

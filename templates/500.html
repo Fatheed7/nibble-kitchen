@@ -26,4 +26,10 @@
     </div>
   </div>
 </div>
+{% endblock %} {% block postloadjs %}
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("footer").remove();
+  });
+</script>
 {% endblock %}

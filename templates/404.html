@@ -1,6 +1,6 @@
 <!-- prettier-ignore -->
 {% extends "base.html" %}
-{% block extra_title %} - 404 - Page Not Found {%endblock %}
+{% block extra_title %} - 404 - Page Not Found{%endblock %}
 {% load static %} {% block page_header %}
 <div class="container header-container">
   <div class="row">
@@ -26,4 +26,10 @@
     </div>
   </div>
 </div>
+{% endblock %} {% block postloadjs %}
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("footer").remove();
+  });
+</script>
 {% endblock %}
