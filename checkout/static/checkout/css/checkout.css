@@ -63,8 +63,14 @@ select option[value=""] {
     justify-content: center;
     margin: 0;
     height: 100%;
+    font-size: 2.5rem;
 }
 
 .form-group {
     margin-bottom: 10px !important;
+}
+
+.form-group label {
+    visibility: hidden;
+    position: absolute;
 }
