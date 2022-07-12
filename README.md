@@ -389,6 +389,40 @@ To test this functionality, please use the card details that can be [found here]
 
 - ### Checkout
 
+  - The Checkout page is split into two main columns: Customer Details & Order Summary. The Checkout app also features a `Checkout Success` page once the order has been submitted.
+    - Customer Details
+      - The first section of this column asks for the customer to provide their name and email address. The name is required to ensure the correct delivery information is added to the package prior to it being dispatched, with the email address being used to send order confirmation to the customer. The customer is not required to sign in to complete their order, however if they are signed in, and have saved their delivery information, these fields will be automatically populated.
+      - The box below this uses the Address Finder API provided by [Woosmap](https://www.woosmap.com/). This has been configured to only search for address within the UK as this is where the business is based. The user has the option of typing their address into this box and clicking the corresponding result, with the information then being used to fill the form below.
+      - If the customer does not wish to use the Address Search feature, they can manually enter their details into the address details form, with the following details being required:
+        - Phone Number
+        - Street Address
+        - Town or City
+        - Post Code
+      - If the user is already registered, and has delivery information stored, this information will be automatically populated.
+      - The user also has the option to update or save their delivery information, which can be used to populate the form for future orders by ticking the checkbox below the form.
+      - The payment element of the checkout app is provided by [Stripe](https://stripe.com/). Stripe is used as a secure payment method, and means that no card information is stored within the website database, with all information being provided back to the website via Webhooks. 
+        - If `payment_intent.succeeded` is returned via the webhook, the order will be submitted.
+        - If `payment_intent.payment_failed` is returned via the webhook, the order is not submitted, with the user being returned to the checkout app, with a message provided stating the order has failed.
+      - The following card details can be used to test the payment functionality of the Checkout App:
+
+        | Scenario  | Card Number  | Expiry Date  | CVC  | Postal Code  |
+        |-----------|--------------|--------------|------|--------------|
+        | Payment Succeeds | 4242 4242 4242 4242 | Any | Any | Any |
+        | Payment requires authentication | 4000 0025 0000 3155 | Any | Any | Any |
+        | Card declined - Insufficient Funds  | 4000 0000 0000 9995 | Any | Any | Any |
+
+      - The final elements of the `Customer Details` section are the `Adjust Cart` and `Complete Order` buttons. The `< Adjust Cart` button will return the user to the cart app, with any details entered into the form being lost, unless already saved to the users profile. The `Complete Order` button will first submit the payment information via the `Stripe` webhook.
+      - Once `payment_intent.succeeded` is received the order will be submitted and the user will be navigated to the `Checkout Success` page.
+    
+    - Order Summary
+
+      - The order summary section shows a compacted version of the data displayed in the `Cart` app.
+      - The title of the `Order Summary` section shows the number of products contained within the cart.
+      - Each item within the cart is listed, including the size (if applicable) and quantity.
+      - Unlike the `Cart` app, in the `Order Summary` view only the Subtotal for each product is shown.
+      - As with the `Cart` app, the Order Total, Delivery charage and Grand Total values are shown to give the customer the opportunity to confirm everything looks correct before their order is submitted.
+      - Using `Stripe` webhooks, the database is queried to confirm the order was created successfully. If the order cannot be found, the webhook handler will created the order in the database using the information sent with the original payment intent.
+
 - ### About Us
 
 - ### Contact Us
@@ -461,6 +495,7 @@ To test this functionality, please use the card details that can be [found here]
   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Used for consistent code formatting.
   - [Slack](https://slack.com/) - Used for support and advice from the Code Insitute Community.
   - [Sorted M2M Filter Horizontal Widget](https://pypi.org/project/django-sortedm2m-filter-horizontal-widget/) - Django admin widget to allow horizontal sorting of products and ingredients.
+  - [Stripe](https://stripe.com/) - Payment Processing Platform used to handle card details in the checkout app.
   - [Visual Studio Code](https://code.visualstudio.com/) - Application used for development of this site.
   - [W3C](https://www.w3.org/) - Used for HTML & CSS Validation.
   - [WAVE](https://wave.webaim.org/) - Used for Accessibility evaluation.
