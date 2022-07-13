@@ -265,6 +265,11 @@
         setTimeout(function() {
             $(".toast").removeClass("toast-animation");
         }, 5000);
+        if (document.body.scrollHeight < $(window).height()) {
+            $('footer').addClass('position-absolute bottom-0 start-0');
+        } else {
+            $('footer').addClass('position-static');
+            }
     });
     $(".btn-close").click(function() {
         $(".toast").toggleClass("toast-animation");
@@ -296,6 +301,8 @@
                 }, 5000);
             };
         })
+
+
     </script>
     {% endblock %}
 
