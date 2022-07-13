@@ -251,7 +251,6 @@
           }, 5000);
         }
       });
-
       $(".mobile-search-button").click(function () {
         if ($(".mobile-search-box").val().length === 0) {
           event.preventDefault();
@@ -269,7 +268,11 @@
           $("#user-options-div").removeClass("d-none");
           $("#mobile-search-div").removeClass("d-none");
         }
+        $(".header-container").css("padding-top", $("header").height());
       });
+    </script>
+    <script defer>
+      $(".header-container").css("padding-top", $("header").height() + 23.03);
     </script>
     {% endblock %}
   </body>

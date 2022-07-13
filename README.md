@@ -554,12 +554,14 @@ To test this functionality, please use the card details that can be [found here]
   - [Django Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/) - Django app to allow control over rendering behaviour of django forms.
   - [Django Quill Editor](https://github.com/LeeHanYeong/django-quill-editor) - WYSIWYG editor added for easy updating of text only content on the site.
   - [Favicon.io](https://favicon.io) - Used to generate Favicon image.
+  - [Flake8](https://github.com/pycqa/flake8) - Linter used to check style and quality of code.
+  - [Flake8 HTML](https://pypi.org/project/flake8-html/) - Tool to output Flake8 test report.
   - [Font Awesome](https://fontawesome.com/) - Used for icons on multiple pages.
   - [GitHub](https://github.com/) - Used for version control.
   - [Gunicorn](https://gunicorn.org/) - Python WSGI HTTP Server
   - [Heroku](https://heroku.com) - Used for deployment and hosting of the project.
   - [JQuery](https://en.wikipedia.org/wiki/JQuery) - Used to simplify definition of DOM elements, but used minimally with a preference for vanilla Javascript.
-  - [JSHint](https://jshint.com/about/) - Linter used to flag errors, bugs and warnings.
+  - [JSHint](https://jshint.com/about/) - Linter used to flag errors, bugs and warnings in Javascript code.
   - [Pillow](https://pypi.org/project/Pillow/) - Python Imaging Library to add image processing capabilities to the project.
   - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - Used for consistent code formatting.
   - [Slack](https://slack.com/) - Used for support and advice from the Code Insitute Community.
