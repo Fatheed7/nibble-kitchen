@@ -364,7 +364,6 @@
       </div>
     </div>
   </div>
- </div>
 <!-- Modal -->
 {% if request.user.is_superuser %}
 <div class="modal" id="productDeleteModal" tabindex="-1" aria-labelledby="productDeleteModalLabel" aria-hidden="true">
@@ -389,7 +388,7 @@
 
 {% block postloadjs %} {{ block.super }}
 
-<script type="text/javascript">
+<script>
   $(document).ready(function () {
     $("label:even").addClass("half");
     $(".form-check-label").mouseover(function () {
