@@ -13,6 +13,7 @@ def ReturnsContent(request):
 
     return render(request, 'footer_content/returns.html', context)
 
+
 def PostageContent(request):
     """ A view that renders the postage and packaging page """
 
@@ -24,6 +25,7 @@ def PostageContent(request):
 
     return render(request, 'footer_content/postage.html', context)
 
+
 def PrivacyContent(request):
     """ A view that renders the privacy content page """
 
@@ -34,6 +36,7 @@ def PrivacyContent(request):
     }
 
     return render(request, 'footer_content/privacy.html', context)
+
 
 def AboutContent(request):
     """ A view that renders the about us content page """

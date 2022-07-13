@@ -5,38 +5,44 @@ from django.utils.safestring import mark_safe
 from .widgets import CustomClearableFileInput
 from .models import Ingredients, Product, Category, Rating
 
+
 class ProductForm(forms.ModelForm):
 
     class Meta:
         model = Product
         fields = '__all__'
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
-    ingredients = forms.ModelMultipleChoiceField(queryset=Ingredients.objects.all(), widget=FilteredSelectMultiple("Ingredients", False))
-    sale_price = forms.DecimalField(max_digits=6, decimal_places=2, required=True)
+    image = forms.ImageField(label='Image',
+                             required=False, widget=CustomClearableFileInput)
+    ingredients = forms.ModelMultipleChoiceField(
+        queryset=Ingredients.objects.all(),
+        widget=FilteredSelectMultiple("Ingredients", False))
+    sale_price = forms.DecimalField(max_digits=6, decimal_places=2,
+                                    required=True)
     has_sizes = forms.BooleanField(label='Has Sizes', required=True)
     in_stock = forms.BooleanField(label='In Stock', required=True)
 
     class Media:
         js = ('/admin/jsi18n/',)
 
-
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         categories = Category.objects.all()
         friendly_names = [(c.id, c.get_friendly_name()) for c in categories]
         ingredients = Ingredients.objects.all()
-        friendly_names_ingredients = [(i.id, i.get_friendly_name()) for i in ingredients]
+        friendly_names_ingredients = [(
+            i.id, i.get_friendly_name()) for i in ingredients]
 
         self.fields['category'].choices = friendly_names
         self.fields['ingredients'].choices = friendly_names_ingredients
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'border-black rounded-0'
 
+
 class CommentForm(ModelForm):
     class Meta:
         model = Rating
-        fields = ['rating','title', 'content' ]
+        fields = ['rating', 'title', 'content']
 
     rating = forms.ChoiceField(choices=[
         (0.5, mark_safe('<span class="visually-hidden">Rating 0.5</span>')),

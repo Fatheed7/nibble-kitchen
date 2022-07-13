@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm
 
+
 def ContactPage(request):
     """ A view that renders the contact us page """
     if request.method == 'POST':

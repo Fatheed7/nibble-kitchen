@@ -1,6 +1,7 @@
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
     path('returns/', views.ReturnsContent, name='returns'),
     path('postage/', views.PostageContent, name='postage'),

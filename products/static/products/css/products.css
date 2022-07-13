@@ -2,3 +2,8 @@
 #id_image {
     margin-bottom: 10px !important;
 }
+
+.selector {
+    display: flex;
+    justify-content: center;
+}

@@ -4,7 +4,8 @@ import os
 import sys
 
 if os.path.exists("env.py"):
-    import env
+    import env  # noqa: F401
+
 
 def main():
     """Run administrative tasks."""

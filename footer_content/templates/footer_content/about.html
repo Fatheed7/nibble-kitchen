@@ -34,13 +34,13 @@
 </div>
 
 {% endblock %} {% block postloadjs %}
-<script type="text/javascript">
+<script>
   $(document).ready(function () {
     $("blockquote:nth-of-type(1)").before("<hr>");
     $("blockquote:nth-of-type(1)").addClass("blockquote");
     $("blockquote:nth-of-type(2)").addClass("blockquote-footer");
     $("blockquote:nth-of-type(2)").after("<hr>");
-	$("p a").addClass("text-reset")
+    $("p a").addClass("text-reset");
   });
 </script>
 {% endblock %}
