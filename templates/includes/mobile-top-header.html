@@ -16,10 +16,11 @@
   <div
     class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0"
     aria-labelledby="mobile-search"
+    id="mobile-search-div"
   >
-    <form class="form" method="GET" action="{% url 'products' %}">
+    <form class="form ps-5 pe-1" method="GET" action="{% url 'products' %}">
       <div class="input-group w-100">
-        <label
+        <label id="mobile-search-label"
           ><span class="sr-only">Search Our Site</span>
           <input
             class="form-control rounded-pill border border-black rounded-0 mobile-search-box"
@@ -27,7 +28,6 @@
             name="q"
             placeholder="Search our site"
             aria-label="Search our site"
-            role="search"
           />
         </label>
         <div class="input-group-append">
@@ -52,7 +52,7 @@
   <a
     class="text-black nav-link d-block d-lg-none"
     href="#"
-    id="user-options"
+    id="user-options-mobile"
     data-bs-toggle="dropdown"
     aria-haspopup="true"
     aria-expanded="false"
@@ -69,7 +69,11 @@
       {% endif %}
     </div>
   </a>
-  <div class="dropdown-menu border-0" aria-labelledby="user-options">
+  <div
+    class="dropdown-menu border-0"
+    aria-labelledby="user-options-mobile"
+    id="user-options-div"
+  >
     {% if request.user.is_authenticated %} {% if request.user.is_superuser %}
     <a href="{% url 'admin:index' %}" class="dropdown-item">Admin Dashboard</a>
     <a href="{% url 'add_product' %}" class="dropdown-item">Add Product</a>

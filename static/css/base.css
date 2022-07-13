@@ -480,6 +480,44 @@ figcaption {
     border-top: 1px solid !important
 }
 
+.image-container {
+    display: flex;
+    justify-content: end;
+}
+
+footer {
+    position: revert;
+    bottom: 0;
+    width: 100%;
+}
+
+.review-table {
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cart-text {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.grand-total-text {
+    font-size: 1.5rem !important;
+}
+
+.about-image {
+    height: 75vh;
+    margin: 0 auto;
+}
+
+#mobile-search-label {
+    width: 95%
+}
+
 
 /* -------------------------------- Media Queries */
 
@@ -555,38 +593,4 @@ figcaption {
     li {
         margin-top: 15px !important;
     }
-}
-
-.image-container {
-    display: flex;
-    justify-content: end;
-}
-
-footer {
-    position: revert;
-    bottom: 0;
-    width: 100%;
-}
-
-.review-table {
-    width: 40%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.cart-text {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-}
-
-.grand-total-text {
-    font-size: 1.5rem !important;
-}
-
-.about-image {
-    height: 75vh;
-    margin: 0 auto;
 }
