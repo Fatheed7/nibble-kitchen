@@ -520,6 +520,8 @@ To test this functionality, please use the card details that can be [found here]
 
 - ### Stripe
 
+[Back to top ⇧](#nibble-kitchen)
+
 ## Credits
 
 - [Delboy](https://github.com/Delboy) for the "Back to Top" idea in the readme.
