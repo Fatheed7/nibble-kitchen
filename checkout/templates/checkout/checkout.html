@@ -55,12 +55,12 @@
         </div>
         <div class="col-7">
           <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-          {% if item.product.has_sizes %}<p class="my-0 small">
+          {% if item.product.has_sizes %}
+          <p class="my-0 small">
             <!-- prettier-ignore -->
             Size: {{ item.size|upper }}
           </p>
-          {% else %}
-          {% endif %}
+          {% else %} {% endif %}
           <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
         </div>
         <div class="col-3 text-right">
@@ -117,14 +117,15 @@
                   type="text"
                   placeholder="Search for an Address..."
                 />
-				<label for="input" class="visually-hidden">
-				Search for an Address...
-				</label>
+                <label for="input" class="visually-hidden">
+                  Search for an Address...
+                </label>
               </div>
               <div class="autocomplete-results-container">
                 <div class="autocomplete-results"></div>
               </div>
             </div>
+          </div>
           <!-- prettier-ignore -->
           {{ order_form.phone_number | as_crispy_field }}
           {{order_form.street_address1 | as_crispy_field }}

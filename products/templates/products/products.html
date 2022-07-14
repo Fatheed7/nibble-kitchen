@@ -195,10 +195,10 @@
         $('#sort-selector').change(function() {
             let selector = $(this);
             let currentUrl = new URL(window.location);
-            let sort
-            let direction
+            let sort;
+            let direction;
 
-            let selectedVal = ""
+            let selectedVal = "";
             selectedVal = selector.val();
             if(selectedVal != "reset"){
               if(selectedVal == "sale_price_desc" || selectedVal == "sale_price_asc"){
@@ -218,6 +218,6 @@
 
                 window.location.replace(currentUrl);
             }
-        })
+        });
     </script>
 {% endblock %}

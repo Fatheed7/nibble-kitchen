@@ -1,15 +1,14 @@
-<!-- prettier-ignore -->
 <script>
-$("#id_product_size").change(function () {
+  $("#id_product_size").change(function () {
     if ($("#id_product_size").val() == "s") {
-        $("#price").text("{{product.price}}");
-        $("#salePrice").text("{{product.sale_price}}");
+      $("#price").text("{{product.price}}");
+      $("#salePrice").text("{{product.sale_price}}");
     } else if ($("#id_product_size").val() == "m") {
-        $("#price").text("{{product.medium_price}}");
-        $("#salePrice").text("{{product.medium_sale_price}}");
+      $("#price").text("{{product.medium_price}}");
+      $("#salePrice").text("{{product.medium_sale_price}}");
     } else {
-        $("#price").text("{{product.large_price}}");
-        $("#salePrice").text("{{product.large_sale_price}}");
+      $("#price").text("{{product.large_price}}");
+      $("#salePrice").text("{{product.large_sale_price}}");
     }
-    });
+  });
 </script>

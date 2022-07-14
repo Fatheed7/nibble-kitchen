@@ -508,6 +508,8 @@ To test this functionality, please use the card details that can be [found here]
 
 ## Testing
 
+Testing and results can be found in the [TESTS.md](TESTS.md) file.
+
 ## Deployment
 
 - ### Github

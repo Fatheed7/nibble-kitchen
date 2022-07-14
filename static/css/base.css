@@ -178,7 +178,7 @@ input[name='q']::placeholder {
 
 .message-container {
     position: fixed;
-    top: 190px;
+    top: 200px;
     right: 15px;
     z-index: 99999999999;
 }
@@ -197,8 +197,9 @@ input[name='q']::placeholder {
 
 .toast {
     position: fixed !important;
-    right: -350px !important;
+    right: -300px !important;
     transition: transform 0.5s !important;
+    width: 300px !important;
 }
 
 .toast:not(.show) {
@@ -523,6 +524,16 @@ footer {
     left: 100%
 }
 
+.search-arrow::after,
+.search-arrow::before {
+    left: 31% !important
+}
+
+.user-arrow::after,
+.user-arrow::before {
+    left: 32% !important
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -547,12 +558,21 @@ footer {
     }
 }
 
+/* Applies display: contents below 992px width */
+@media (max-width: 992px) {
+    .d-contents {
+        display: contents;
+    }
+}
+
+/* Changes main logo size on screens below 1360px */
 @media (max-width: 1360px) {
     .main-logo {
         width: 15vw;
     }
 }
 
+/* Styles ingredient selector on small screens */
 @media (max-width: 405px) {
 
     #id_ingredients_from,

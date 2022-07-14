@@ -1,4 +1,4 @@
-<ul>
+<ul class="d-contents">
   <li class="list-inline-item">
     <a
       class="text-black nav-link d-block d-lg-none"
@@ -15,7 +15,7 @@
       </div>
     </a>
     <div
-      class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0"
+      class="dropdown-menu search-arrow border-0 w-100 p-3 rounded-0 my-0"
       aria-labelledby="mobile-search"
       id="mobile-search-div"
     >
@@ -63,15 +63,12 @@
         {% if request.user.is_authenticated %}
         <p class="my-0">My Account</p>
         {% else %}
-        <p class="my-0">
-          Login /<br />
-          Register
-        </p>
+        <p class="my-0">Login / Register</p>
         {% endif %}
       </div>
     </a>
     <div
-      class="dropdown-menu border-0"
+      class="dropdown-menu user-arrow border-0"
       aria-labelledby="user-options-mobile"
       id="user-options-div"
     >
