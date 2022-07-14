@@ -68,6 +68,7 @@ select option[value=""] {
 
 .form-group {
     margin-bottom: 10px !important;
+    width: 75%
 }
 
 .form-group label {
