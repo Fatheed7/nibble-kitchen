@@ -42,6 +42,13 @@ SECURE_CROSS_ORIGIN_OPENER_POLICY = None
 
 # Application definition
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'TIMEOUT': 604800  # 1 Week
+    }
+}
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
