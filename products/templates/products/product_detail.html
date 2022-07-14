@@ -348,11 +348,6 @@
           </p>
         </div>
         {% else %}
-          {% if not product.in_stock %}
-          <div class="mb-5 text-center">
-            <p>This product is currently out of stock and cannot be reviewed.</p>
-          </div>
-          {% else %}
           {% if already_rated %}
         <div class="mb-5 text-center">
           <p>You've already left a review for this product!</p>
@@ -367,7 +362,6 @@
             </div>
           </form>
           {% endif %}
-        {% endif %}
         {% endif %}
         </div>
       </div>

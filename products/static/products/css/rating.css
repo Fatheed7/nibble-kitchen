@@ -61,3 +61,9 @@
     margin: 8px 0;
     display: inline-block;
 }
+
+@-moz-document url-prefix() {
+    .form-check {
+        margin-bottom: 0.01rem !important;
+    }
+}
