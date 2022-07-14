@@ -299,7 +299,7 @@
       <table class="mb-5 review-table">
       {% for rate in rating %}
       <tr>
-          <th><img src="{% static 'img/' %}{{rate.rating}}.png" class="rating-image"> {{rate.title}}</th>
+          <th><img src="{% static 'img/' %}{{rate.rating}}.png" class="rating-image" alt="{{rate.rating}} star rating"> {{rate.title}}</th>
         </tr>
       <tr>
         <td><small>Comment by {{rate.author}} on {{rate.date_posted|date:"jS F Y"}}</td>

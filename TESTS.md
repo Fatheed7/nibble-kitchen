@@ -8,6 +8,7 @@
   - [JSHint](#jshint)
   - [PEP8](#pep8)
   - [Lighthouse](#lighthouse)
+  - [WAVE Testing](#wave-testing)
 
 ## Validators
 
@@ -156,3 +157,17 @@
 [Back to top ⇧](#nibble-kitchen---testing)
 
 ### Lighthouse
+
+- Lighthouse, using Chrome Dev Tools, was used to ensure best practices were followed on the site.
+
+- The test results can be found in full [here](readme_content/tests/lighthouse.pdf)
+
+  ![Lighthouse Test Image](readme_content/tests/lighthouse.png)
+
+### Wave Testing
+
+All pages on the site were tested using the [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/). All pages returned **0 errors** and **0 contrast errors**.
+
+Due to the number of pages contained on the site, I have not linked the images within this repository, but the site can be explored on the WAVE tool by clicking [this link](https://wave.webaim.org/report#/https://nibble-kitchen.herokuapp.com/).
+
+![Wave Example](readme_content/tests/wave.png)
