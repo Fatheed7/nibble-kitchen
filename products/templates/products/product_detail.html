@@ -324,7 +324,10 @@
     {% else %}
     <div class="mb-5 text-center">
     <p>There aren't any reviews for this product.</p>
+    {% if not product.in_stock %}
+    {% else %}
     <p>Be the first to <a href="#nav-review" id="review-link">leave a review!</a></p>
+    {% endif %}
     </div>
     {% endif %}
     </div>
@@ -345,6 +348,11 @@
           </p>
         </div>
         {% else %}
+          {% if not product.in_stock %}
+          <div class="mb-5 text-center">
+            <p>This product is currently out of stock and cannot be reviewed.</p>
+          </div>
+          {% else %}
           {% if already_rated %}
         <div class="mb-5 text-center">
           <p>You've already left a review for this product!</p>
@@ -359,6 +367,7 @@
             </div>
           </form>
           {% endif %}
+        {% endif %}
         {% endif %}
         </div>
       </div>
@@ -390,7 +399,7 @@
 
 <script>
   $(document).ready(function () {
-    $("label:even").addClass("half");
+    $("label:odd").addClass("half");
     $(".form-check-label").mouseover(function () {
       $(this).addClass("text-success");
       $(this).parent().prevAll().children().addClass("text-success");

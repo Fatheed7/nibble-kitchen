@@ -75,3 +75,7 @@ select option[value=""] {
     visibility: hidden;
     position: absolute;
 }
+
+#id_remember .form-check-label {
+    visibility: visible;
+}
