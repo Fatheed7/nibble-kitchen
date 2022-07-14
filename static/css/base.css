@@ -565,6 +565,13 @@ footer {
     }
 }
 
+/* Applies display: contents below 992px width */
+@media (max-width: 768px) {
+    .image-container {
+        justify-content: center !important;
+    }
+}
+
 /* Changes main logo size on screens below 1360px */
 @media (max-width: 1360px) {
     .main-logo {

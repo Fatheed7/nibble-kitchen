@@ -399,7 +399,12 @@
 
 <script>
   $(document).ready(function () {
+    let count = $("label").length;
+    if (count % 2 == 0) {
+    $("label:even").addClass("half");
+    } else {
     $("label:odd").addClass("half");
+    }
     $(".form-check-label").mouseover(function () {
       $(this).addClass("text-success");
       $(this).parent().prevAll().children().addClass("text-success");
