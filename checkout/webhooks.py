@@ -27,11 +27,14 @@ def webhook(request):
         )
     except ValueError as e:  # noqa: F841
         # Invalid payload
+        print(e)
         return HttpResponse(status=400)
     except stripe.error.SignatureVerificationError as e:  # noqa: F841
         # Invalid signature
+        print(e)
         return HttpResponse(status=400)
     except Exception as e:
+        print(e)
         return HttpResponse(content=e, status=400)
 
     # Set up a webhook handler
@@ -51,6 +54,4 @@ def webhook(request):
     # Use the generic one by default
     event_handler = event_map.get(event_type, handler.handle_event)
 
-    # Call the event handler with the event
-    response = event_handler(event)
-    return response
+    return event_handler(event)
