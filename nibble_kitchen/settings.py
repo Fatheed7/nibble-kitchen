@@ -13,15 +13,15 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 import os
 import dj_database_url
 from pathlib import Path
-from dotenv import load_dotenv
+
+if os.path.exists("env.py"):
+    import env # noqa
 
 import django
 from django.utils.encoding import force_str
 from django.utils.translation import gettext_lazy as _
 django.utils.encoding.force_text = force_str
 django.utils.translation.ugettext_lazy = _
-
-load_dotenv()
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

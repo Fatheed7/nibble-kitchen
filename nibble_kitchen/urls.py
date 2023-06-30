@@ -17,6 +17,10 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from allauth.socialaccount.models import SocialToken, SocialAccount, SocialApp
+from django.contrib.sites.models import Site
+from django.contrib.auth.models import Group
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,3 +34,10 @@ urlpatterns = [
     path('', include('footer_content.urls')),
     path('contact/', include('contact.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+admin.site.site_header = 'Nibble Kitchen Administration'
+admin.site.unregister(Group)
+admin.site.unregister(Site)
+admin.site.unregister(SocialToken)
+admin.site.unregister(SocialAccount)
+admin.site.unregister(SocialApp)

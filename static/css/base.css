@@ -469,10 +469,6 @@ figcaption {
     border-top: 1px solid black !important;
 }
 
-#id_country {
-    display: none !important;
-}
-
 .selector {
     width: 100% !important;
 }

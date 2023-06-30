@@ -104,36 +104,14 @@
           <legend class="fieldset-label small text-black px-2 w-auto delivery">
             Delivery
           </legend>
-          <p class="text-muted">
-            Please use the search box below, or type in your address manually.
-          </p>
-          <div id="app">
-            <div class="autocomplete-input-container mb-4">
-              <div class="autocomplete-input">
-                <input
-                  class="form-control"
-                  id="input"
-                  autocomplete="off"
-                  type="text"
-                  placeholder="Search for an Address..."
-                />
-                <label for="input" class="visually-hidden">
-                  Search for an Address...
-                </label>
-              </div>
-              <div class="autocomplete-results-container">
-                <div class="autocomplete-results"></div>
-              </div>
-            </div>
-          </div>
           <!-- prettier-ignore -->
           {{ order_form.phone_number | as_crispy_field }}
           {{order_form.street_address1 | as_crispy_field }}
           {{order_form.street_address2 | as_crispy_field }} 
-          {{order_form.town_or_city | as_crispy_field }} 
-          {{ order_form.country | as_crispy_field }} 
-          {{ order_form.postcode | as_crispy_field }} 
+          {{order_form.town_or_city | as_crispy_field }}
           {{ order_form.county | as_crispy_field }}
+          {{ order_form.postcode | as_crispy_field }} 
+          {{ order_form.country | as_crispy_field }} 
           <div class="form-check form-check-inline float-right mr-0">
             {% if user.is_authenticated %}
             <label class="form-check-label" for="id-save-info"
